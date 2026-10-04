@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Dr. Hans Steidle – Historiker & Stadtheimatpfleger von Würzburg</title>
+<meta name="description" content="Dr. Hans Steidle, Historiker, Autor und ehrenamtlicher Stadtheimatpfleger der Stadt Würzburg. Führungen, Vorträge, Publikationen und Aktuelles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Prototyp: Schriften per CDN. Für die Live-Seite lokal einbinden (DSGVO). -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#1e2833', 'ink-soft': '#3a4149',
+        paper: '#f5f3ee', sand: '#e8e1d3', line: '#ddd5c6',
+        wine: '#7c2f3a', 'wine-dark': '#612530',
+        gold: '#b0873c', muted: '#6b6f75',
+      },
+      fontFamily: {
+        serif: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  :root { color-scheme: light; }
+  html { font-family: 'Instrument Sans', system-ui, sans-serif; }
+  h1,h2,h3,h4,.font-serif { font-family: 'Fraunces', Georgia, serif; }
+  body { background: #f5f3ee; color: #3a4149; }
+  a { text-decoration: none; }
+  ::selection { background: #7c2f3a; color: #f5f3ee; }
+  :focus-visible { outline: 2px solid #7c2f3a; outline-offset: 3px; border-radius: 2px; }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.8rem 1.6rem; font-weight:500; font-size:.95rem; border-radius:3px; transition:background-color .2s ease,color .2s ease,border-color .2s ease; cursor:pointer; }
+  .btn-primary { background:#7c2f3a; color:#f5f3ee; }
+  .btn-primary:hover { background:#612530; }
+  .btn-outline { border:1px solid #1e2833; color:#1e2833; background:transparent; }
+  .btn-outline:hover { background:#1e2833; color:#f5f3ee; }
+  .btn-light { border:1px solid rgba(245,243,238,.45); color:#f5f3ee; background:transparent; }
+  .btn-light:hover { background:#f5f3ee; color:#1e2833; }
+
+  .textlink { color:#7c2f3a; font-weight:500; background-image:linear-gradient(#b0873c,#b0873c); background-size:0% 1px; background-position:0 100%; background-repeat:no-repeat; padding-bottom:2px; transition:background-size .25s ease; }
+  .textlink:hover { background-size:100% 1px; }
+
+  .navlink { position:relative; font-size:.98rem; color:#3a4149; padding:.4rem 0; transition:color .2s ease; }
+  .navlink:hover { color:#1e2833; }
+  .navlink[aria-current="page"] { color:#1e2833; }
+  .navlink[aria-current="page"]::after { content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#b0873c; }
+
+  .rule-gold { width:44px; height:2px; background:#b0873c; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity:0; transform:translateY(14px); animation:rise .75s cubic-bezier(.2,.7,.2,1) forwards; }
+    .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
+    @keyframes rise { to { opacity:1; transform:none; } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation:none!important; transition:none!important; scroll-behavior:auto!important; }
+  }
+  .yt-cover{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;width:100%;aspect-ratio:16/9;background:#e8e1d3;border:1px solid #ddd5c6;border-radius:4px;cursor:pointer;transition:background-color .2s ease;}
+  .yt-cover:hover{background:#ded5c2;}
+  .yt-play{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:9999px;background:#7c2f3a;color:#f5f3ee;font-size:1.25rem;padding-left:4px;transition:transform .2s ease,background-color .2s ease;}
+  .yt-cover:hover .yt-play{transform:scale(1.06);background:#612530;}
+  .yt-hint{font-size:.72rem;color:#6b6f75;}
+  .yt-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:4px;display:block;}
+</style>
+</head>
+<body class="antialiased">
+<a href="#hauptinhalt" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:bg-ink focus:text-paper focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Hans Steidle – Startseite">
+        <span class="shrink-0" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="47" stroke="#1e2833" stroke-width="2"/>
+            <circle cx="50" cy="50" r="41" stroke="#b0873c" stroke-width="1"/>
+            <text x="50" y="57" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="34" font-weight="500" fill="#1e2833">HS</text>
+            <g fill="#b0873c"><path d="M38 74 l4 -7 4 7 z"/><path d="M46 74 l4 -7 4 7 z"/><path d="M54 74 l4 -7 4 7 z"/></g>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="font-serif text-lg sm:text-xl text-ink">Hans Steidle</span>
+          <span class="text-[11px] text-muted mt-1 tracking-wide">Historiker &amp; Stadtheimatpfleger</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8" aria-label="Hauptnavigation">
+        <a href="index.html" class="navlink" aria-current="page">Start</a>
+        <a href="ueber.html" class="navlink">Über Hans Steidle</a>
+        <a href="aktuelles.html" class="navlink">Aktuelles</a>
+        <a href="publikationen.html" class="navlink">Publikationen</a>
+        <a href="#kontakt" class="btn btn-primary !py-2.5 !px-5">Kontakt</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" hidden class="md:hidden border-t border-line bg-paper">
+    <nav class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-1" aria-label="Mobile Navigation">
+      <a href="index.html" class="py-3 text-ink border-b border-line/70">Start</a>
+      <a href="ueber.html" class="py-3 text-ink-soft border-b border-line/70">Über Hans Steidle</a>
+      <a href="aktuelles.html" class="py-3 text-ink-soft border-b border-line/70">Aktuelles</a>
+      <a href="publikationen.html" class="py-3 text-ink-soft border-b border-line/70">Publikationen</a>
+      <a href="#kontakt" class="py-3 text-wine font-medium">Kontakt aufnehmen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="hauptinhalt">
+
+<!-- ============ HERO ============ -->
+<section id="start" class="relative overflow-hidden">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7">
+        <div class="reveal d1 flex items-center gap-3 mb-6">
+          <span class="rule-gold"></span>
+          <span class="text-sm text-muted">Stadtheimatpfleger der Stadt Würzburg</span>
+        </div>
+        <h1 class="reveal d1 font-serif text-ink text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight">Dr. Hans Steidle</h1>
+        <p class="reveal d2 mt-4 font-serif font-semibold text-wine text-xl sm:text-2xl">Auf der Suche nach der verlorenen Stadt</p>
+        <p class="reveal d3 mt-5 text-lg sm:text-xl leading-relaxed text-ink-soft max-w-xl">
+          Als Historiker und Buchautor erforscht und vermittelt Hans Steidle die Geschichte Würzburgs. Seit zwei Jahrzehnten ist er ehrenamtlicher Stadtheimatpfleger. Seine Führungen, Vorträge und Bücher machen Stadtgeschichte greifbar, von der Barockzeit über das jüdische Leben Unterfrankens bis zum Werk Leonhard Franks.
+        </p>
+        <div class="reveal d3 mt-9 flex flex-wrap gap-4">
+          <a href="ueber.html" class="btn btn-primary">Über Hans Steidle</a>
+          <a href="aktuelles.html" class="btn btn-outline">Aktuelle Termine</a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 reveal d4">
+        <div class="relative max-w-xs mx-auto lg:mx-0 lg:ml-auto">
+          <div class="aspect-[4/5] bg-sand border border-line rounded-sm relative overflow-hidden">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/6xaJSlACEQAAAAEAABZ/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFllqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmE0YjFmMzQ1LTg1OTQtNDcxMC04ZDg3LTAzZGJmNDk2OTE2NwAAAAOUanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuWp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNobloms07sX1YEhg/J+pd0WAAAAG1jYm9yo2lkYzpmb3JtYXRqaW1hZ2UvanBlZ2ppbnN0YW5jZUlEeCx4bXA6aWlkOjVhZmJmYjI4LTg2OGMtNGQ0ZS04YmNhLTVkNDdlNDc3MjY2NmxyZWxhdGlvbnNoaXBocGFyZW50T2YAAAHianVtYgAAAEFqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmFjdGlvbnMudjIAAAAAGGMyc2hB1g/i994tzbBS0xY0NglMAAABmWNib3KiZ2FjdGlvbnOComZhY3Rpb25rYzJwYS5vcGVuZWRqcGFyYW1ldGVyc6FraW5ncmVkaWVudHOBomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD9fjcaJAg/mIpS5o/XaMOMeGiomGfuWf9CTuFA5EiwtaRmYWN0aW9ueB1jb20uYW50aHJvcGljLmNsYXVkZS5wcm92aWRlZGpwYXJhbWV0ZXJzoXgfY29tLmFudGhyb3BpYy5vcmlnaW4tY29uZmlkZW5jZWd1bmtub3dua2Rlc2NyaXB0aW9ueGZDbGF1ZGUgcHJvdmlkZWQgdGhpcyBmaWxlIGF0IHRoZSByZXF1ZXN0IG9mIGEgdXNlciBhbmQgbWF5IGhhdmUgY3JlYXRlZCBvciBtb2RpZmllZCB0aGUgZmlsZSBjb250ZW50cy5tc29mdHdhcmVBZ2VudKFkbmFtZWZDbGF1ZGVyYWxsQWN0aW9uc0luY2x1ZGVk9QAAAMhqdW1iAAAAQGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaGFzaC5kYXRhAAAAABhjMnNoD2p21wdw0M1qehS+894CZgAAAIBjYm9ypWNhbGdmc2hhMjU2Y3BhZE4AAAAAAAAAAAAAAAAAAGRoYXNoWCCZ/0RxQdz4+SCy0P06P7MSBaMy8/HEBj6QQbRgoi2DdWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBRmbGVuZ3RoGRaLAAACPmp1bWIAAAAnanVtZGMyY2wAEQAQgAAAqgA4m3EDYzJwYS5jbGFpbS52MgAAAAIPY2JvcqVjYWxnZnNoYTI1NmlzaWduYXR1cmV4TXNlbGYjanVtYmY9L2MycGEvdXJuOmMycGE6YTRiMWYzNDUtODU5NC00NzEwLThkODctMDNkYmY0OTY5MTY3L2MycGEuc2lnbmF0dXJlamluc3RhbmNlSUR4LHhtcDppaWQ6ZThkYjA4M2ItMmIxYi00ODFmLTlhMGUtNzQ4ODFhNzhiMDM5cmNyZWF0ZWRfYXNzZXJ0aW9uc4OiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIP1+NxokCD+YilLmj9dow4x4aKiYZ+5Z/0JO4UDkSLC1omN1cmx4KnNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuYWN0aW9ucy52MmRoYXNoWCAM/GJ+zCY9Q5ooxvDbOd8aPxQ7tiCC3ZUOI6hiNNKjtaJjdXJseClzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmhhc2guZGF0YWRoYXNoWCB2QI4g/+x6YbBHT34/Eqm2DW3p0uj0p/MiuxeuSJ1Y9XRjbGFpbV9nZW5lcmF0b3JfaW5mb6NkbmFtZW9BbnRocm9waWMgRmlsZXNndmVyc2lvbmUxLjAuMGtzcGVjVmVyc2lvbmUyLjQuMAAAEDhqdW1iAAAAKGp1bWRjMmNzABEAEIAAAKoAOJtxA2MycGEuc2lnbmF0dXJlAAAAEAhjYm9y0oRZAhKiASYYIVkCCjCCAgYwggGNoAMCAQICFEDloAruwjnQvriD+gZCBT1nVRMAMAoGCCqGSM49BAMDMEkxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMS4wLAYDVQQDEyVBbnRocm9waWMgQ29udGVudCBDcmVkZW50aWFscyBSb290IENBMB4XDTI2MDgwNzE4NDM1NloXDTI4MDgwNjE5NDM1NlowRDEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxKTAnBgNVBAMTIEFudGhyb3BpYyBDbGF1ZGUgQ29udGVudCBTaWduaW5nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmHoKa8tQGAUU1TS9QqU5W0Tp2N3XsvlK7BfQt6YWKwEzd2R3/dzKPEUDdCjlLjp9fT+KFjRVnuZ9v0oXvTe3k6NYMFYwDgYDVR0PAQH/BAQDAgeAMBUGA1UdJQQOMAwGCisGAQQBg+heAgEwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBTOUeIEgU5kWyP448TPmj6cwddcwjAKBggqhkjOPQQDAwNnADBkAjAxcx0UngF60stVjs5G4T2eiptsBk5mf9oCtfJPAUBl8qs/PEXa8+gk1/X5QJ2DVcYCMHBfXN31YapiSqYvlIWrDVDJKOvXMl+kkz37Wt0PBI8sw486Mq6JeOhT+lRR4b1HCaFjcGFkWQ2eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9lhAkcFX21YbgZa49aOKR/5+FHiMfJGme0fj7omHPFiL/czL+AzOIL7PlUz1q3ERXpYHyDwwvsBcPthFTwqUycRxZ//+AGBGaWxlIHNvdXJjZTogaHR0cDovL3d3dy53dWVyemJ1cmd3aWtpLmRlL3dpa2kvRGF0ZWk6U3RlaWRsZV9IYW5zXzIwMTYwOTExX0ZpY2h0ZWxzY2hlcl9Ib2YuanBn/9sAQwAFBAQEBAMFBAQEBgUFBggNCAgHBwgQCwwJDRMQFBMSEBISFBcdGRQWHBYSEhojGhweHyEhIRQZJCckICYdICEg/9sAQwEFBgYIBwgPCAgPIBUSFSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg/8IAEQgBdwEsAwEiAAIRAQMRAf/EABsAAAEFAQEAAAAAAAAAAAAAAAQAAQIDBQYH/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/aAAwDAQACEAMQAAABMyjM3y+m2VV6ZYRgrSZQGToAGiKyDwGmPztLn1vsrslulIGvpuCbSalFOzEkmJOgZ2QnovpZzTs9dCkzzTM7VJWfqZ9cjSe1NxShWM0oi0CRjAhm6mYD6Wdo4a3zhZIpM4K+i8LIya1FOzGdISSQJJA9N1LOaSVdDu0lcE8XFoenm3yWW0TlkBGANWRtiGoSCUEATQgnoAaGGt04ykkk4K6m9k2lGkydgZOmkzoEk4IcgdnOJKuhSjNVWnZzphFA1yVV3QlvUTSyUmdoqdVwQFIpC3QAP59b5wmh3Z2IgckJRnGkydmJnYSToEk4NQQPS5tOn0qUZTUGdqkkdq65CaDB0yQNEOlB7qkWkUFgOMZQE9AHQw1sm1rUHUgYgciSTSahmdMZJCTpgdnYFQRRRzbOn0J2nNVs7VN4h1F8j0kCyzgDQWiIQcCywdEKATKWWGBR0NGqq+ivUxoJ7zY7QdAsg/FkJKHF07GTsCZ0JxyKKObaUX0qUZqq0nqTx7hHyGAuOGpnaGaCIqkFmiASy6yFfVOdqkkTuHKJuWkFpHZac2N2dCniX2g9MCCM4/OZJ2hpnYSTsx6Lx2c7GUX0vKM1VSSqTA7g3yWNOCLQjg6VltBCdtiVhWqCYegUS5O+Y98zIQ1lgeLLYeyUPgdTmPPDWrVWbKcc5ZJS0kgQ5A7OdjJq6Xk0pqpJVNlF0HyKprkWBGBMvtqKBq4Te+geOadl94Whc1WzaC+Dw56nIazGtCm5vQ8+hiDtubEC6TJzM1O3PsnTA4pIgYDPGumcozmqUlUqBFb5BiKbQYU0dq4kUlMIygu+nX2uQufT1VeHQLp58poZmu1ZGFjqyGNn0yH7PPsNxAt+brRsu5wLFLk3SSYwhgbMBnY6ZSZ06klSIpk75BVbWBQxFTUCaLB1Yunx292GTuNe14v0bjMOvkL9S7Xm1+hx1za9VogGY6uHoZm/JTha6qatXD1UnTqc2TsCDMDZgM7HTN2dOtkqU00a45hkUpzeypq2dNoCxN2H24mhp11vPH0s6NdurX1TnxLtmiYzLrQuXZxIVsgJq5Ojkfu5U5MnbTiTOzECcEzBjOJ0zdpDqSVKQ0ovkaEykSHIGZAke4UtvBKr0tFw+Ru+oXnG1K67rsgbPTsBc2nKSha259ZKqF5dVEofo4xA4znNk7OEyQIE0NmJVbB9EnZ1VbJ6mpoxfJJJDsGIHCRFNwCxOEvtLgHNuXQZt8bdGPhEyi3Yzn1jTaJAxOBib4+w5HC9ictjsjF2dMikmkBZnUB03Y9bayoU3Ns8eo1WnBc8WuiNqSKgkYMSFkYjV0vQ83oGZSettgmm3A1QOa04ZuHPnbnQp6pxhbwRz4GZOS7JgVdlDWBS9d72VWIdL3uAyIcQL0WnPZfFIhGMmXSlYAjR5bsjq9Pj9fDv3SOevnfoMkMPF7eXlDmZd1PZKtXE18THTcmn18yKTtM6QNRdU1zDSVdDyeY61NCgpJmMQIQua8kA0KomBUj6rau7Cjn+hye7EMEsfzPUpnmOM8jOnFGEh9ljoTqwu4uyWaXz2vP2qjK/PZ2caZ001F9DOadO+icoJt2SEkkPAJjvXyZJ++R0ZYgmxm9eVbXw6MwRj6ZfMufi83WIHrVcvZn3s4dDtcno8nR1e1nm8nQByW8b08u6fy+56PlpzgOLVJnhxpurZzrRrelkZ2ALDTtSxG6S4N17Yex54ohQNg4GjTSEqLrqRaSuRDZ57kOtx1EfSlwennjdNo83ZxJWsUq1rSsvnp9msvMr1h9H1/HjXM7bnw1qZnBvBJ5GSQOmQOkzHdkGxCdfr8Y+bqA0Z4d3JXJvPxysrDC3zIvmdDZzWuxP4PrM9+pLzdfy/WpzNyXNvlD6EVRMrVmETol73hE2iVb82xLj/JA99C5/e5tKWS5NUk4MnTEmdGrGT+xxhDGCsDyNoNrLouiwNjYJ5oO7Clx1XTZ2dW7PHZUX7ZqeT+h+T7BxtVvN1VBEZ8aHzDn7/wA7fcFiaZdD5J6V0MnGdaQ6fMYPe8vz3k6V3O5V2pPjvdy+nTPnWqyj7PHQMUEFIpQjQYR4uiqeE0KF1YQrtaKGD1Wl8B1B2Fnp6RZkn+N71g1lGW5NJYvv/MrldnVSD6IGYaFVdLCc28WWCwVPn7w43tFSzO48zDpe9CF5Xp80a8U8LqFU1AeymlXXbUE3igULIoV8CpoYbaZPju9yMfHfrRNinxvctG1cb3vnRSSFDhUYKIihVDnQ4iHocvk2zqdWjCwA9KlP0LDS9ji505IE6VKupKlF0gqdIckklaWlFGEJJ1JJMDpEuLullJdnCayQTpSAOlJOvPSCJiWVF0JcG1IyQ//EACwQAAICAQMDBAICAwEBAQAAAAECAAMRBBIhECAxBRMiMjBBFDMVI0IGQyT/2gAIAQEAAQUCLETPQeUm0k4wzcz9KeP+DAMMsHan5H+vceR+p5izdiF+g5Kyw8f8p5WDtT8j+O5lwMdB4B4HDnoh6OODEGCvcn5H+vdu+AacZ42rzPLYGcARBAMx/BESL3L+R/r3WH4r0IwAeFhMzEPwEs6J5Hcnj8b/AF/fbcvxWvjncx5/+Y8/rZE4XdgE7liQdyfX8b/XusOR/wAn7NkQN8JjM2wGMMzGABEg7l8fjf69B2WNgBocQnIxmeD+lY7j9sxmgPCQdv6X6/jf6/uDssfM42quSy7WqTIfO8DIxgqfl5jTEr8DuX6/jf69B2WDCqcisQ5DUcHzZjBxkrwwlg6VwAzExP3jovj8b/XoOh6P8gExELCFslWwued3A8oQSBLDxzEzNxnu4Bt3QWkyuxGB2BUsDD8b/U9B2WRFLMwx0A+HTHNfkSzmIpmTXPk0WrMKEz2HBUYL2NK95iallKWK34n+p8wdjgCVn5uV2Fp/88dF8r9h42Zh+KsHd6qsAnEQHO3M9jcTpI2ndY62CI2SrZ/C/wBT5g6HpZPEJ3DwzOBUDMwRRAcDeArIzsKwoK/H2zEXEWvIVBPbEspBj1EuawvQeO+z6noOh6MfjugPPl3/AKl6LEjHisAlRAm6bJ7QntiBcdMzzLU+LV/LD5B2kNkd1n1PQdD0tGRiDmFcFx/rXpXF5BbmviJE+vEzE8Nibpmbubf6yFaHhSgJ2EDus+nQdD0sbAzmYg82f1rxAuYg5U4inLIwBBMDAT3FM9yB7JvfGczdAec5QKIaxvFIntbCwwe236dB2WBSCCFBOSPnYMiLBgRz8alLSuoLPjBiKqGezXBUBNrdPAETkNwKirzHzaveNTVsPbd/X0HQ9CYx4m7LWnheYvISPzKPFW2Kyxipg2wbZxPlkwiLAcCwhjS+IbMItmTqm7rv6+g6fuNtxnEPn/q0YCnhBEGD9iFUT3dk/knD3HadZgLr1lesQxbqzODDFyDuDJww+ptuaaa7MuOW7bv6+g7CMDGYVinBsAKBefEQ5jnYH1JUHXOTRrS1tddntapmrsa1pTqn36a4xNVA5aKOMfJuGZgUuciaQ4Z/t23f191pmcDOW43WH4KsYYini8D22pu1NlOjatK9Fm/BTT6un3C/p520eklnPohMrF2nepqsc4WXbtzDc7potKB6zpshlcdt/wDX0HY/JxxtGDwTyIcRcS+v3FrrRV9syir/AGaptqVDc/8AFyg0XKU+3PjPZQTgTdzY3IOxv8bdrNRrPS6gtVftU9t/9cMHY4hJM+W4tlj9N0JzE8L5SvI2rtpP+zVqTK22GjV1uFVWhXoxjtiM0U5l1RWj0z1HUJF+RJy3bd9Ogn66N9j5Xdu2ndt+G2AxD8a+HR5ZZtVdTWBqteGlWpQ1oVS2i3AOoyGtzGsjNmfqvBfGaz6bRvuYDvu+pHQdh56AfIEbmcgeei/XO0o03gzUl62Z7bHo9O1Vk0mhrWisvTbuhaYJJmcBWxKTsqbUO0Hfd9DMcDsxiD5RhiVkxyMAzmD6W5ED4WpsraitK9KFKMVi2CazmuixbkKlX8AnlzgenWV++dke33G77/qRxmDrkRnAaZxEGIVPT9D63J8PZ9xGf2VVLXiU6tR/HdZ/+hZRqmZ69L7VkY4GZqLZZayOt2pviLtr7ntxLLCZZvhru3IH2ndHBLeypjKN22MmCnEyYfOOUHws+tR22vSPfZ7KZ/Nulb6y2UUqoKBiWX2xy1pxHtxKkOov12lNV/p9Q9nuY4FjHcTPMYTLTBM2T243L55bwq5jLifvzFbarNuln9dJLBkYn+MwZFtEr4UkYe90tS7Iv1HDPmem07KPUArppV26buf6scnv3NvVuc/JTgseQPliGeJ7le9WDWqfjuSK+YxXafgTtsR7Pbj2FppaTbcnC6htxQYTuf6/uDu3xclh9o3kcnHx3AR5qXal6bo1+0pq4uqBhuxHs3z+Q1cLs5pqNporStXOEPyv73+p8wdMTHXyVgbDfYWLiCL4jzVrurrVW0rOyH3jPfee40W1hC2TWpsairYq8RjxUN2q73+p8wdydBEGWvPAPI+hEPi1czTHaty8nghoGEzKxvbTUJWPjAJacK+s/iOh319z/X8C5yDMSpGMahmjItcX6mGMuZZ/rtfBDqRCuOizTKuFbErYmL41D5OvVhZpbc1NWCO1/rMzM3Ce4onvJPfSe+sRGL1emXtF0dFcPEcywZAGAZiYmoqyFMzCkIgGItjCUWktp0yLDtXdvt9pXr9PLqKrGrusTcOxuQyajP8AF1Bn8GwwenCf46uDQVQaSoT+PXErqpBhxCBG5hGSZiETEuapBdUCPIWGqbMTErR92m3bNRZhaE4USuvF5TIpaXJtP5Wj8jdmGY5ImIxAGs9VSuWWPa+gs97SGrk08aej3DZoUKfwrM1V+3Z4rKM9i14AEVPniKefMs00IIP4zGjjM3bpZq9PVLPWdIsu9ccy7V6i+BSZ7RmlsOnuTZYlNCmLp1E2QVq01Wn2MFPtUD57cwJK4sYZYQNCFaNphGpdfxE4hjS8bRbpXvH+JMfQOli6KDT4hp4erBovfTNTrFeVahwRYrgebU9yu340aRPhjEzKzmboGELlX9X3v6Ynq3qNb+mespqqn3Z/Bnk9GjSxMENmOgM2CbIUltUZJTYdNaPW1zp/UqLWqv3EWS0e4UTarnjdKj8MzdAwaaj5aan0TWXFf/O6fbRT7dOv1g9Pb/P6eD/0FEq9X0tsrvrs7mhhjR1wQemIRNuQ+nBj6YyzSEwo1baLWWqNPcl1amF+LDCYh+BMM1Ot/wAfNBrP5lQgOITL6qtRR/itIp/x2jms9GAlWpsps0nqSuAQRGgjHoY0aGZz2ETEKS3TpdWvuaXV0NZprK7lsr3ZhfJfwn0Y/MnLaz07U6vUen6X+Jp0b45m6M3wvbj35781Wmp1aul2jfRepGuV6ql0bo/QwxoRPB6HribZdp01NWnufR308HwY54H0s82v7hr8RGmYTyx+OeLV22TMYK66jQPVF1RAebsT+QpYnmGHoYOwwQCFDNTpF1lOi1j6O2sqwdTCOccOAAlYAxifoH5Z4JhPx3fFwGmyFIRPEfS0WM/ixsLn5luN2YTD1Ix2iAQLNhU6nRVayvR32aO/bunt/wC7bxf/ALLtuJtmIw5B4M/RPAOSBkFYVhWYhOU1JwrnADfHMJ/CIIsxxja1+kq1lHp91lduP9tze3VTWVUiATEdYRiGGZ4B+NEIhEIm2f/EACgRAAIBAwQBBAEFAAAAAAAAAAABAgMREhAgITAxBBMiQTMjMkBRYf/aAAgBAwEBPwHcupdCF1LoX85dVy/Qum7LGJZoT3LojFyZhbgVMskPFko2L9iV+CMVFDfJm0K8hxJO6GLrornRnFiKQ4lQbZF7Fvo8D+Rjoh+CZJCXPXG9iGRbgakRL3KnkVO46Lh8uulDgxRDwSli+Ue5ciicUxJ2+BUqfHF9dH9o5W8kZ88IbUuCNKKHplO/wJO+qFvovgvkxI8Cd9G78Mk/ramXL7aT4EjktcjwSl/Q42RLzsS6IVcZEZaZJDkQj9lThD65z+tI8ou9IxuRViu+OlsdQc29aNT6ZjcUSOk45krwdhO+qkZGZnuSKTyVzC5iSvYxPU/kE7F0+nEx0o1fbZSrwn4G+T/dPUfkesW+nLVcco9PVz4Y7+ER8FR3k3sTbOUX6oScXdFGoqkbj8D87FpiXt1UquErk5/pN7ovtjJ+wxbVr//EACcRAAICAAcAAgICAwAAAAAAAAABAhEDEBIgITAxBEETUSIjQGFx/9oACAECAQE/Ad0uldUv8Jj6V0sfSulj9NLZpe9dOlvwWFXp4WNJjjW1dHoqij3kkx2zlCdjj2R9s1WxIcUNqJqsiucmqzWx7HwJHLJRZOzUYf7FFMxI8ZrokhOhzGxlEXwRZKXHX/0lpPDVGidC4IeGqhzvjNdDsSMT0UL+yWHRLhkZNF/Yud72okvts/2iU5MeS01yVmupxyeUYcDVbEUUVtj5lLJkYfsU+di2vYsD+NlDYyMCcq4IbF0fHwuNTPRqmUhonLSiTsw434VXvQot+EfjN+kcGCzxo/ZYycX6P0jL8ZpU4koac7Rea2Mcr4MThn5KY8Q+7JStnxneGThqRKDj062W2UzFw9aoxcGUPRZ/HVYayaMSEUr6KNOTHzwzHwtPMSiuTDVRWTKJwjHmhaWShXQ0UShaMWH45ULliXGyStD44FifscFLldWJh61RGP8AYluxo07yTo+uqaX51uxF/HP/xAAxEAABAwIEBQMDAwUBAAAAAAABAAIRECEDEiAxIjBBUWETMkAEcYFCkaEUIzNSsWL/2gAIAQEABj8CV9BqFdH4p5hFR8c6/FYoawopb4h13VqW3RRV63+MdcVCP20D4517KZ1SoV6R8Q64pZTotSZ+MeQaQrLbT4+KeQEbLLQ/KPKuiUVahQ1wbHzzzryqxpdGOyNSNFrri4VYghdZW9lxBEi8c08mylTrhW/hbqVYNUkreFC4fci17OWdclCkASttBpdQyAoF1cK11cVsrC/hS9eVB35J12QdyChaSV4QA1bK5XWPKkbqRaOSeRCmkas2nbSQV5Cywh4W+s8oQdWUVmltUqyA6rcKwtrPJidV1NbuW69y4HArjCmsK6HlEQiOh1nX55NqWVwtgvarEhbytoOjupUr7KRsdR5Q0FFbraV20e5WdoCsizYoGaRqOvyVfQaFELdWNA7orFXcuitWQvK/9BByMdDZXUzqOu9DfTdbokrhlNDlJcIPRFvSkZj/ANUjEBQFbD9lINqQH2RuSNZ1gaAt1vS6Ib7AiHXlC3VBSEI2KDs38LNh4/puQZ9aJb0xGrhM9lenhfws/wBVc9lkZ9PDUHs2Oo8iCrK6C81A6LIMw/C6q6y02srErof+rjbv3Cs0fhWFMy4vcV6r74YQ9BkPH8pjTvGo6whqOiVKzHZQpC20WUFeo25RwsTZHEd0ROo6xau2g1JlAqEGmFLHWPRbqNTWRus4EOK9Nh+/O4VBqL1NcqOX2qGzKBL8qLHcTj1KOE/pTfR3KzPeLotaIjdx5U6ZFkZVkdBQUlT3oHNCEq0IPjibTxo4vwi7ZQ32DkzqvXdHQFCGG1snovdlKy5wQpdjO+wC4Id97L0cVjmnyi5uztEJuUwQsvqmEByctlbFV3XW6nOVOZ370ymhleKQrUvsVmMEdFw3CsV2WZ5zOQPZWqV4CHlZjvzNtFqSor5RVlI3Uv3XDdZlspcuFZXbUNJO5ur7hM1nkm1b1msAyrLZZg262hQrFeVClCdhurUA8azzCr1ymgxG/kIPGxWZpsaWC4irKykrwg1tAOQeZ5V9JQ8KCrLst6XQaFflnklWoITRphFh6f8AFB/GmF5VqsfEyYIQxG7HWeSa8ITcxiFa+nP06rKduhV9Hml6QsDEicMG6HZZmftqOnde6nVQxpP2U4n9sed1fiPlWFPKGgr03fhQ5WrZXUqAvARY4WcjhP8A02Rw3bdCs7d9Ra1tlcq7yrup7V7V7VlwsMNpfkcbw37rM3ZQVB0SEJp5pm7q2/nZZTY9ipGx+BB3oTWSbIs+n4nf7Ive4kr03bs/4pCzBXsFwbq9lBgq1lBrm6IK+6upZ+yg87yoO4UOxLqxcfwowcMN8lf3MQkdq5uhsVIuCt/wuEUgppHWhNSvsrVuJXCY52du6JDolcT1HRXW1e7eynDIKuFIpEKFJqaWQI2O6xHYTi1+HxAhAj6vE/JQw8fFyY38FcRnnSFfXnDZHUKDgEflcD8ruzqxoNJpiNiZaUD6WVvcrDjFcD+ryhgueXgbE7oerhuLDs4bL/G5Xw3L3QuBwPwLLZbKHBb+oG9P1BDEYZadIoFJ4gdgjikReI0OwsVstcoyL/GF6n0lj/qsr5a4INxf3Vvg5Tv0KGYRC9fA48F/uZ2QLTY6BS+yOL6gy9Aeiyk8RudIcK8Qh/8Asod7e6A3HZZs8fBymzhsV6OPsrXYdjU0lei37uPII6VyvEhHEwLt7KDXJ150hf8AsbL+n+onJtPZH+FZDyaSdgrdeQNOYsvQoO58hHo/uv6T6nb9JKlCgwhs27uVOopp+DleOLo7sj9F9RdzdjQu7KXXcbnkGhbp/8QAJxAAAwACAgICAgMAAwEAAAAAAAERITEQQVFhIHEwgZGhsUDB8NH/2gAIAQEAAT8hzN6E7fkOs6uKcvYmgRgKxHNA9QrzDEGnBfF5/HYKcI6HvjeuBZiaFqwxkju+jFDNGa7O7S0DDDPJHOw9bJ04L4dvyrtiFvh740zCjB1IJWo8AlklumxPQ1EYroOgpjuzRCFz0dvyhysQtcPfDm1wJ2I1WDwsOx0hKB6NIMDLZ0dRWO7ENWG84Lx8deOjv8Ue3wtCHwgtYJd0RkDk2YHm3k8hNQ2RdkGasHlUThXx2/D1+HPbha4e+E6h0AlJUbiJ5eDcfTA1iVlIdjWKZFbBZ2NuKF8jv59cdc79i1w9n7NWF6aEaB8ziKWJi0UqhCw9jQtom1l8VqnQtf8ADs6HvhWoy4bH3psApxCUWAuwpCKFQe8TA1D7movB1wvzqOVxodD4zlFJgzQyIgy5CKWjKgZQak7KDyEUhRQ1Fyubr4dfLPEe+To7w+1FQ7ELPrBmWG+gNzyzoMHQZipSHSMV6FN8PGF7H8zGVT+RU4TS/k/qD2Y5bcK8Ya6YNGttaGYWRxJZR1cUQZ8nQQZCwuzEsDFC2IGvAcT9DIgYAfZB1SM3KHx18vZ1xNnxpw98Ip79ExRmYd2RmrsudGYJsJBHn4O6MUhlqqTRvsNxd/yMlr/9F9iHEv0hkV9jZp10NBZ+CGhFOjTvJj8sDHvjs18F6iPgi6qGJ8mdwyRsj9hLqkvGJxz77IIEP9lFYOqOiPo8jg0yZGbY329himv+xCK/4D2gOjv8EZDBrxtwzaaYmxIMkZU6foR2kTjZUVcToENAhDPZ556TtyjEOUr0dATVsMDjUYAw8six+gLeyI/HPXHYz+gJnjX4HB2nuQgoLVSspbwLwIqeAhJ3kqmWJXZcJEtCY9CkVjWezJE0ENoeR4DIwofVaHeNz1x2PjbD0acbcNnoaJ6yI0+iwBktjLzwjOgKgE0G9cJZZJ6EvoPeozcTiwENoyMPLRrH6Iukgzn4BGh6NONuMHZSsGhpoEfYrAjoILKRC9BjERnDyeYkdoGghCFn/RCRk/aRDZCYojMqjFaKmsLoJd9Cf6hKK56+HbHpmgx741L0Fxp6Jo5XdjkVkRXkduHR7ijDw8jutoa2GeU+0KsfxjZmKMAGnoXG4wPQNJDuyk+IdKTF1sNZFQ8vkVe+S9GnG3CrB4TzeIdp0M0eB5JsfwOojyQjIpxN1iPaexivWY4oGb2YGN1suPBmnfQpJg2o9kKPPYhea7Q5ca+dZpw+CARglICS0QigqWUIuz0AVk4vAKwwGFkSzPIzESjCYajYMia8CcAegExgad2+cwXSUl+wSBmAH8PfJfJ74UxJ3gTUOXQMQrTAkSl5GrMwLc0nHjushcTzgx3dwQZjxhCqP0IP1UzNv7F1O4NsmNPfBE2V/wAiaH07QqL2BOmvlPE/IjyPfDdhEhIPuEbNmYM8groZrgMiyvoHs4JVseUdCHKLTBGzWKPrMYFt/eP5ElfqvJW6B0dPPYZBLYSVLrCdDyHlZjv5l6NB8qoEZA9zkVwQsCfQwLPE7c/Ymn6Qtdb9DtRNRm07JyX4EIWX2TWegR+1dqCz4v1/oxYkNUG/6DlbaDPj9rZRzoB/vR+CaGhjlFZPscJMmz0IJMMl+CStcCXrRVWSZzJkRsiFC0OBVQzASGEsilha4VfYa3kHjEG0V4u0OlTCHsE7O+O+JJj0afA1E+6YzYvZpi39ENPIzXAaAnQpBpxcwVpDYBiiJE3NK4FHFsykIbBlKPILJvhoQv0PkZd8TNOHvis2jNLYOwLGOhKIZzNKUuZCFRPTHTCkyI5H4kRMHn8sGdtQsmfQabTwNuMDsBUnGh4I6IqMZ5gSZH0h9EJt3fw64fPbes0OjswN8iPYqAxK5mvBYiH0fsXAyXHigkclMjclFhrvRSn3l2jDCEoqgURwW1jTtloRyJBtf/uO/k+BwPCdcGM9hBUzDVGgzFhSTCiasgulL1GxgqOpfjUgt18cPsFBZT/YO1vTmPQA9T3BoPLnEebIpqxqvJl7PA9Vr5qxTyYVMx5QLU76gptDAMMK8DZr9IYmcBGA6A7E9hL5DSIFJn0GTFhJgFZAK1eNo0pphLPtlI/tJRSoiJlgZ1FK3BewxwH49JRabJ/OiygxrnB20hAfSLe2QVRsibpkXGh7ZDXmBFNZPhhSRIM/BlWPwJBYFhGRjt+i4GR3LDLr2FVLIG5CFqNEeoyS9fHo6L5AXCnwfFhmq6G0QscA7JoVvCRnboyFU7GbqLWtwwAPGxVj58LFzJ7nYGwDVTuEYxVUEeK/AD2FwnxycMRRYmKP0hOYjE4LzCQh+y/I+jCf2Cc5gxVQKSyjD5BeQsTIbEalUki8BZP2xODZ+xnR38XxIoXwo5UskYO6MyYlA2GZWIR1MW0yyJB/cctoSHWPE/0LPLMWQyQVSJwDU5xHI9ZFx0e+XxNotcqzPwswbVskGGYGhGELDuKh9GeV8bF9ipM9PCsejzFF/wAjBRTUx7GapfqAhUc7r5/1h7EsC5zxR9AZeG4GXSVQxVN5ZoExxWmClR4BLzyLCL+yjAiqZhjSQ1gjMwB0cp4PoUS6a4En8o80gakOx9SNfQfnPX/AevQxHcv2BnUfmMJMBumRRoi9cWX0IKCUuvt4N5Z/0VtIeUdkL40JnMSp2KAbWoZvlRm0dgkB9vMI/cPitELpHsLpojbsbEKI6YJfQmR+inkVqmFMQQYTwzuzyEGxN3/IxSbZTQk5uUI7IxWDcJ/BI2j5nI56pvv2GJRlIH5ijrYL7P8A3TyYS4Ox7PRjwREMcUqMEXeSpT6A6akG6JYFaHgMySTsuNfwkMhPti3N6wldItAeChdLDqoi5TvCYpAQ2VdjNcXE3ZgsoWUMQ4WBNJEq4NPEfH7+frlHODwW4KilG4K22Pof2pEwv8cDbCO9il6T6IE+8uMsyWK0YlE4evAS1KzF4UyCQbpBFNhl5PYL4sM5/eKDav1+DJsQI8kUs6gqI/kOP+B375EdBJU0GaDGs+xIaPfREXRY1EWQtLZIvNyMT7GMMWZ29mDN5hc1xJ/2IhuWZoegfsPejnB12/hdBfgd1Ck9EPGx7gUkQzkPUNfB6Tsh6+HDUoZ6KB/G1HLX9CspZIkC1oUhWjMXsiib9diTBWnBP0U0Z6TCPIEkal9wIgPrGvDRpmf2I78EY5CN8fuL6MoimGNQYqqNcg4ohgyiamExi872v/C8ZqoiEYDH3+hSr4jsQyUNmEvvIuo0CdkBktP8k2Msoxxkqb4cTWMCyaBquKpQ7VHos8BBWmKEMSEXGDRLED2vH9Aimz+6Ms2qr/BZIg7BkKd4sydGHnBvGAln8bBmSswDeFtqmFkbK1hjbyUWHgkJxb6dBkx+8JyJXTH7EajavF/QnEwRiCG0d8G3g/zyklSaFewUHTTbLKorSGmDLcgNCHIOXY+P8oylkZ+hkoYkXeRgy/6pbjTIKTI3+oYg+LdD2Zod64XCCFVoQZY5FuEs5IYOy2hZuMse1tB1IdWwGxpNhQMssQyo7qUYwZjhux8CImxGetw7jcBJQyqMjsdZ9hjKBRivx2DXACAa8YzpWnSJVKRWSEj/ANaGkKUK8Cx0QOjwrwMgzIhSHo4vWNjNrBNIaRYLM9g3gbGPRplENc61QSuOFLFIvcHLfYxLP0SNUVLTT2xUwWWRKJ3wk7OyNgnPkZ1mtieFY1p//9oADAMBAAIAAwAAABA4gACF1sFkfHQQC2ghYYoECnJI1CGtmiWx6qxDbx0tYiLAVfFGbnzhJan5ipJRS04O2nWBXAIXFeJwqQtQG1zAeBw0RKhhI9BJooLgRALa0vhD9ANygPdabTu0LBUGoJsZTdqhKMnKMXJkoRN5Aw5qnABKcqq9QLup2hmuWj4XqioGsIn3LfE0CTZ+hQv+pI+Dw0Uqc6CWI3GTCLt5WbZXJeGfeksqYJQjrRBmDgOW7N4Xd2UGAortF2lDIBBkAz6aAYcjkPXx0UBriEkkNbntBARuV2BWiaKBNsj+thFoCAv3DvU/OGITIAPHg18xFHshETTtwCsLEZdddGAHA9HeKETg8FZrhKhCHwbv8/Rz/tQu2XIKVdlyaghkrjqmyEKYhpILyWrK7gBnTazK+HZSolNrLsFlTxNvp6W0dShVOAg8zJdAajBKF+J6DwONxzz0Hz6H557/xAAfEQEBAQADAQEBAQEBAAAAAAABABEQITFBIGFRccH/2gAIAQMBAT8Q/JePy8t8vE/h/Dx+WefnB84+xfZ95Hn5Z/BPBEzwR5+WeW8F84In3hiEzuSQW23h5fLxwxE+86Ft5G5fyPVwPLx4J4I9vs3zeFbEYNj2XgLVC84eSeD8aSCSQiDbLsh5dpHO5b+CeDgmJ227EO0hXi+CDLroQnLtyzOfRPBzswawPqAfbr4yzvJb09j7vse6XU/BPBwcKRv2V2L3E37K6FsqdyO15fzj6R7PB5wcbFsLJiZnCAfJnvL0Z7CKf7Jv04Y9j3k8nhkdIFg6icdFsu8MsBhfey7esD23/wA4b1LoltyPOflmbXRYGSL1hGk/7HpOoTo8PB7t/Cf5l/5HnO2zJjyD6nDu+BduQcfsjg8dFklkeTx1ndiHyLISwQvky6nrLXhvkeW28LnVsezriOu5Y57BdLC+raNskJ2hE0nj5Hk8EJ7CdBfyL77HEIiDBPY8n3CIxpxuQZ3JPJXy1KvvDMC+SHdgfUYaQy0xGPIgpXsE0/D+PUswCUJNU0v/AAdgLB7eS6dSXe+wq9WvHh/DLa/LVsLJWuNj90miME/6c32DG26m6vY1+9hthnrETdEy1N92XXhYwabP+bXRk7kmeTliDDhfkeyw8Zt15bOPsez+DkiQV9fgvfP/xAAeEQEBAQADAQADAQAAAAAAAAABABEQITFBIFFhgf/aAAgBAgEBPxD5wcZZ1evwIjn1McO5wRN8vXJEcke8kvXB5E8PfBwcHPqeCfJvkeTw9xyRyXqYifIjzh4B8R5CR6Sx+2RyXqYifNm+R5LHgQdl3ddCz9LxifxHJepj3hny+RBrJChFB3L4IO5sc3pYnsRHsx+GdQWSN90OdT7qL42UD5MuC9THv4PkXVfaHoIMsdwy7grsJ+xZx6mOHh8JvLj6O5b/ACP9vcwCXyTe8EezETx84AX9JIwvfdthgvGOtbDojS2av5x6mIn2+zwkyQfcJ6h/VvpbsYHttIR6utiPZjltke3218e4v2LUI9RvUeROTAPCOPUxwkMxbpD1J6y51HGRndHsvrggg7IjtA+z7wwb1dMWyc6nrtivdsbGevlu8EO5eNtvUHckCuE/b7OPZILL9hGLa9w9cF64zbM43e5/cebDNAJbAy3yH9R4HsvZk6CUsERHs+/ghg27p5fJ2MzrhdxGSWlqVd512BmZ4xD3MY+WtrAOgiIkBrBQ2PlvJjTCEhGshgyZHGD7MclsYCrP6pREeixv4393SfMsxLFyQ52WMD/lscPBBvVh6bB5ZhAl4NLflgwV1nWLJfyfJaElMeLPHmSdh4POCyT8ATj3KnzDAsDKvRAnA5MxsyMHUBrHkOxw8PJLXP6Zetg+ydXy3I8P2wSTw5wPInl5fkJCfD8GJe8//8QAJxABAAICAgICAgMBAQEBAAAAAQARITFBURBhcYGRoSCx0cHw4fH/2gAIAQEAAT8QxihC1Qr3EtkV4fzBvpGO1sxPU5JqWwAJzMLwhiAWfUN3AxiIw7ZrGZqgx4EWg+YaZzj4bieTwHkr4GZH5hlgh4FRoZqVFcBTqOswIFD4IqOgwo3IinClzHPOhQ3QGSKxbhxKalbiHedcxnNszT2grwIFw5mZ8Juczmc+DyR8H8Ux9zNvAaZojM66jPqetNx1hTGTEENSqqJjTel4i14+pVhH8ze3UjaEzmLaponbBDBbdlJalwZjo8EafwMDHmoeX+Bmi7mD4Dwsvr9KlhoR4SOcPjAKrLcFUFbo20MkbJYmczcGdbgy4MAG7Bo5lRKniLPrNCK/hDCQ6lXXqVDbjHwMrH8ifps/bh5G8YlsTGbixwv1M2UnqFdR68AiW52a7rBKrx3F1DZT1ENRrCzDNUfTFWsTMXuHBDmGyXmV/Bvh3/NxP1WZfJDxHhdwLUuvzFkYvEFo7iHXLMIUorMN2auULsUdzmz4hzAxiYjBHumIxWBU3/M0Jik5Q8cHuGl8+CGVmVKr+Jj9dlZfmHhHgohVx0YgQ4cWFmqWO5flrmty1CYTuZaAu49qK2wQlqOIgdAWL1sT4mmCIs334mQY9eAnF9QY0ypq45j4ePDOPHcP42O35g4mkPAdyxtlLqYpoZygYIRBoTWugGDVSGmIMlPEGJlYLLy+oC7upiuDuDeBGmawQeBt4HUfL45/iPxMH2IXmaIRvHcawyooIEWbqETRWnMt1FMusOrA+Yj7aZTJgmIt3kYpKwdwxvR0y4oxDRe5onOceSYZojG2JmcRgP4VGP1mbfmDNJgxKHwgvoMPuWVx3LlXb+eYXXvMcMwOFUPzRSfImGM5lNL7lrDrFRLmgcE0QMfcoiNPUJ0R6WWAxd6z/UE1OiYfV1AMuPcx9QzpRjxOYxh4rwziH8+DP5nKaQ9+Ei8kXFsrocfMoZxUcrmjOczpGGN5nPzjce3uN2v7ZXUWIkQZxhLBHgdzuT2GIM7NwsyVW4DH6hFlDbnLmlRyCL+GO2I31juoXNJxe401vmKMYzHwwieD9Zn7U48XHmtbsBYSqbwckorHtgeZnmKMuNV1K3qjOPCwYtbqDbxeOwMLM0XNSgNzXdRueKamYcK0t/8A8jQrGx17wTUuKp/5FPYJ5qLUgbDA/UC2EK+owG4xjWJuccVZjzOjHLxz/DiHj9Rm+u53NYPOYXAViYdwvTuVmTH1uZAAdUTTYh4ihFKeo0byguFxu3GwTjRhcsHojq6Nrz7y8lDwTHitt0ExcuYYIIAlz7ylsccMTHttLlvE5IWOpUVT8kN0bLf9cXLotHikc1Bq+fIeGViBqMx+JlpXcvLwMU3LaBUcgn1hIvuUUyHMsWbMX3KL2v3LKuCIOmoS15iJfOD5ljtV1/syHBriU0lvVst5iqqF2JrFwu7hILvdQ3abxBhWHsgooGiiPeWyb/yPpF9XxTlNo7C4AZPRuIbUPHtDMI28fS/mNU/HhdQZ8FY4DScxBKO7uIFKdzA5on0NXE5iMyyiL/qNByM7nI3NzEZjfqEi5VM+oO5RUSuuLxU14r3HwMPqOWfyYalnogTfTEhW8VuKBsYm6Tpizb16Ev0kyXBTWMTGb8C78cRgKPDafos2zZ/HaDUmqYd1GL7m866mz1M+oJttMkU6epUUq4+ZXErMQANbYQFWtEWmrVMDUtgr2agBsYbiJ6mI0tnEXYu26lzmWNYPVywPwXF/IWHT7mdmmFoYC+aGYEY44zKrcfB4SfrsyM2QS4PLkZDMMMFBd3ULSM7qLY3B0wZGzFLG2by6RqsyjNVLVp75hJDOGGixfcp4C7szHwU18EClP1cUDcHGrmCM4Ls/n/ZaRPKP7g4MNzc0TMJG7UxtiinMY/v4iQxXz4lEi2r/APse113dxfU3b9+OIQeP1pYxeI08Y4iy3ZH0YDfGpmW7gXBvkiaRZrUBWoACsj90+IhykHGCN5cU9szsh6zMMHr/ALQf+tuYJ6hiZbnvNSjKhmhRY7gTFGIs3ZzMhnKr8g5I2hVlmb/HUOoCcOWnphZ9HTuFNHIPUpb39DOfPHh+p4WfgWZSGIK+7M56lBhSszFPDc2n3HfTAmeDWdSpbGpRgEIqNguph8Om0EbXMu8I4SoRlA7l7SR6IGmP6YXpD2YT2K7LiuQMTJn5iGKLmo4+bWK011M5cfVH/sPlW1t3MXoazyVzF9Be5FxU3/n5hLsvBfJOJh8U5mY+B823xRk9QpaO6gOiDuV2pJRm6gc0SBugzOposuBBTKsrrP5gsMDpiwG6XTCvbr4+ZRFPcJX7jNmx4azKkqW6bJhAmJbgyDO+ooWJb7HuKOfeO/qUtF3MZzcVrKPXq5V2aTfI+5vaeOZl51c4j9aJMBmkfHUIH2zPM8GY41M0MaFJzUsmTFriCv8A80fDrZFA4HgJMQRw3gjNonY0QSC+N8sEwZysw27inEsNK4MGm9R7ajyHdLafXYykgNfX7hDGnqEBoYhKtJFe4iz5lQJ2GyUeblNa/jkh0oz7xpuVMZv+DucVBk9RhwxqRjZAxGU0BhnNiZYH5DOYoboOiMIymh3fEEEpi04tVjmITVyXLnLat1Gp+i/5Kziqby0GhrM6K7aNxYrcJc38dRa2tn/xi6Cq6UH5zL7goP6tkCbhYNr+OIArO4Ny+mji+5abNyEde4GsruNIHEEky78H1CQvgFD+ItCnQePB8sX4pcc6fBcvgZXPdx5xeYeiInFwzoJWJlGIMSs1XzCF3RBzew1+oLSHegwuFXh3ncWq6huS1UAdtaSA9qmk+DGJW6it1VMIMWAD4Yke1JP7VKo/AlTA9ksjk0VmThPse40roVcvidTlrAt0++Y7jUpeHrw58MOYkrhFOuODOZUNd03g1FnmZJ1tqNHRfMOwNhglLT9qlPjXuG7NVuEtYO4TOudyi8Ep5Pi5ZGmGVPlTEoToN8TEO/iK9HG4iKh9Q659LnGcxQwBsZ5uYU2hcwQdLO11F5ZBEavPF8HEfIw4I1LFjvHxNK7jhZcM16N1NlUXCeGqRa/AnqM8JxGrbiS5iEcolRWbGJRqnxEZG7XUwGfvcbpPBzDBGqb5lljLbYH1FrabM7ln+TqIGn6Yt7lEWaNL7iY4iZIGi9EZwyjq+6grEGw6OIPDOPHEvrfgMrU6JiV4qwxZ+LV0sQG/xZSi2LqVFfmEaqqoiopLCCsEXN0jzJIbJMthE6TJ++dpAi5juNR5ZbUq+qcFPrqNrnz7OGVzPEbd4ywq7SAfwpcir4lcfRG4EQRQ4PUX2TEwejtlKqV3bKvwxgKIqI8y8xXL0aNeJhm4bTpxnM8gmTO4DRYRIOecuGiM+sFukr5kvLeuJsAK3cLhxlce1X3Np1uoqb3uoZPmmIuYmP8AMQZa3qplHbhmLbSGxkROp9zYewO4WM0tbomXHS94xqOyMZweF1VAKmI7W5MWIsRZlWz+YcC0lHNg5gWGrKZgFWM3bmGGGzB1FewkLRnbK/FjuXKoRuph1VHbDoo5ztfcSF05UnxiB3esD/NilWniPrb/AOR/0BW/YmGWKtsehgHqqd7haZgNDMmN4qHAfCYbh2thvVkoLAR44jNXHEupgk9JR1W+Y66XQMxWULdzRFdXdVRDOCXpVwxraPZUai7/AMhkWUa+JlJB1c0L+nqN6mNPg5QaUKR0ruYhsXNiQiD2YlUBtyRkP8/PmKloONSkCXbxQf7QxiL1USLCk6jnCvUSornmYtriHQKlvzLhEQYTKqpmjweWB6SLucwHscy1Wtswb1TEqdoCXJBYlw9poxLgXhucs+pq4QaXLNzE6xEUWnMO8Xb+pj48ETa9pOjwpxAl07gEFHA3BNJ+UovcXOUI7sj8g3BhWxe2GI/GY8pVdE5J6uJyHIeyYNpbR8rPaMP6UZb4lSzKc3CDMA4huLcemRWa4nKHJzHglMkqFrhJt2iZ9Sr/AFG+HwqAl8SIDesYLuINaeoKAB1qJ8HmbI7rPTKEoH7led+sS/7aXMGoHvAtmrVSzfwInBS6OmABLpQuKhnKqIw8HhcTP4GfuzSDM5wIPh3FvYL3iEFTeppxkoCsx1BTgYS0COqpyfqWdZcNovZE+tfosuAMlOIeE+c6YrqzxuKKUYzxMbB+Ynd+dzP7cbnGrxBKt+6hlQ+9YiK45Igq6TfMNIwfxfoMIqbzBBmVMpRAplEvDVrUGNlxKELdwWDM4iRqvUEhvNnvuNP7kGUaw+TZKTtPvB5i1IGnhgAJFKSXfObPfbH4be5aNmbqrBVtBQ+5g2Jm5rHMqHJfxc+D08PgvwMNUd+LGLljJYu5UxeQM7UMrHYru4hLUuZuP5jQLviAJkoitJ1VTgcwjypl3MX2kbra8Bnp9zqnMR4inRWWRWAEzMOwmpBUxC7sPKvcpKOVYnycRnMfLP3cNvHMUjAzLnx5GENRYvMr75hZl6q9hgm/BdZXMQrRMLdeZkwUMsO9Qh8jV2MI3lixhuHBi2wqwy45xBb69XUwq8dwb/TGathNRDxLKo+sNqrmF6Rb1U4vuX/EFNa/gz9Zhv6MA8B3ifc335IDmAtN+CXc3xCpxcEq/UQ2rr+kf9lSM+4/GoSir0UEsFnODiOMLSympZunKDiX3c3jU2ZEjMa+y4q5qaeJr/S8TNRqNA1LeRBbZupQSIsagzfMZ9JfbENnDf7jBcq81iGfPI0fXxKa9ic+/DBzHc9qFReROHucU3o8Qk5+TYTYr8yjaX8TVfig1fqlzI3XL8u2PsXyOCY1XoK/u4U2NcK/1MjddcRA1f1wthriFspkVqZ1rECuNQi5cnK3hnpYWO3HFyyVtq43lFaM9TWEYczbFWiXnabrDfRKE0T8x+gz1X8vI+z9yykTPL8rR+JlcNk6Yw8AKhBwhKkrqQa8HmnylPNveiWZrZTLmTPvDe5mthhsk14weYQIK2toPucAQdvj7iAVte5blevatf5DAexKW1ziPVkc9xg8+9McNhtZkRGSQaVccYlzSbMM1S3cxm4Wr/pu5ZilKuN2k/Vyq5ikeZYK+7v9MQLLhIFSocbi/Xm+OZds3lkn1Fpb0zQ6nPEIUaGRhlqd0N2tBWv1OGGiv+4emOy/41GlI4NfjMi2BgOJS29Ru4SBkCZWU/0ldVrYTl5fMfQ37gaWN6QGqutsanXdXAwqX6jfjxARu8VTFnbXPUIAQADaYjlPnaEyRtQusyABk5dyvB1KzKvMMeSQQb6l4m0FoxzOHPsnEhDnLnI+sWWeOsx1FgxWEGuHRC2rsrj5IXhgI6W8fMBB5qwyoLuckW+fE5LSJ3AZIpN6Cty7aFMAYM6Wwgbef7Is1ucxgTPV6EEL1Y+xZ6uVwx1T/cM0eAz7RrD6/EQfOBvDF8BHUImY5lwr7YVjlH+hBri4QUZTHWckwWPuHlWPUarhbNDRGBFnuXryINs2xq/h4YdPOSX8UTJkcF/Xpmgjzf8AqBp5uHiJY156gNBlpdcRuVkPcroMpolF15hBGv1zBwkA1Kl82yocVOaqndbh2z3YbeuoCSa1h1fNTggn2vS8PqG334IgnbqIUXjg1PgaLzL84vUSkBpdQ2syWCdxZTqTMwMsCBZSYzncsMp2QdC4NSystXiyKnJOB7Ov7gug5rNMTSBD04e4Fkr1l6GebzK78NWy9MltQrCOHMvaHoy/fCfh7hMGqc10/iNAOSWtOmCE0YAc2nb4T3GgLO4tfCsx++Wpw/EzXes4SE7NDg/MNFbSPhiaLH5gFeHE3aucnMzLQUbilJkW4NMJGJXDOHCHJGXgh1TLyOIQTXr/ALEVjtFq5RM4/wAYUCbRybjBEEr5itmtOYu+KREnFoHT7gW4u14iElqQn6IuFdmt9So5jZl54pUhkQbRM/wnsjAIauT5l1yce8Wmu1/qC/cOQldDWmID61KN82RTdRg+mZ2osvqXpDmZlAjyT3xK9WZQTYI6M4Fl/wCRC13J0+5wsPA3FzyqWZzEty1vM0aEqY00VFTSlVcRq9gOC9X3FTaxEMIgkoN3xKimklS9IX6kXN9Rc8tfxjWUwex0hhEhl5fGUFdyQUTifE9RSffzGAJTHeFj3MFmPOE44AvuDVxCJEpxzOyZZZjlNDewmAxem/THPvEV0+pQkzalHP6ZrvGoYxgtCbZaHpfuOaTSqoq6hVgOSyVxy1ZEc5UNuQZnolPEXxRertcmCydy9YIMVUm7GBNqYwlGX4jth043MmmJFwqfUcvzH3DdbmQ9z2UqCodkAGRr36ZjOkcx1F5OmNu2y6rEttb1qUZYuX26HOX/ANsqaan0IBeM6S26O1O43LaJhPUZTxNFLMMW8SiAMKwUZiL6sgKcWDPoszR7ljdofyg3zPlAOe4tMcvmbufc5IdVDaBCv3HSI1E1czpMAyf56ihrdLmHD9RtJSTpVcHbxHpX+/wfBqAOlwABbAe+JRa6alhirXiKrOo5bplG5Q5dKeADcpMuZ//Z" alt="Dr. Hans Steidle" class="w-full h-full object-cover">
+            <span class="absolute inset-3 border border-gold/40 rounded-sm pointer-events-none"></span>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTRO / SCHWERPUNKTE ============ -->
+<section id="profil" class="bg-sand/60 border-y border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+      <div class="lg:col-span-5">
+        <h2 class="font-serif text-3xl sm:text-4xl text-ink leading-tight">Würzburg verstehen heißt, seine Geschichte kennen</h2>
+        <p class="mt-6 leading-relaxed text-ink-soft">
+          Ob Barockresidenz, jüdisches Erbe oder der lange Weg zur Demokratie: Hans Steidle verbindet gründliche Forschung mit dem Talent, Geschichte lebendig zu erzählen. Als Stadtheimatpfleger berät er Stadt und Verwaltung in Fragen von Denkmalpflege und Stadtbild, als Autor und Dozent bringt er die Vergangenheit einem breiten Publikum näher.
+        </p>
+        <a href="ueber.html" class="textlink inline-block mt-6">Mehr über Hans Steidle</a>
+      </div>
+
+      <div class="lg:col-span-7">
+        <h3 class="text-sm text-muted mb-2">Forschungs- und Vermittlungsschwerpunkte</h3>
+        <ul class="divide-y divide-line border-t border-line">
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Würzburger Stadtgeschichte</span><p class="text-sm text-muted mt-0.5">Dreizehn Jahrhunderte Stadtentwicklung, von den Anfängen bis zur Gegenwart.</p></div></li>
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Jüdisches Leben in Unterfranken</span><p class="text-sm text-muted mt-0.5">Geschichte, Verfolgung und Erinnerung der jüdischen Gemeinden der Region.</p></div></li>
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Leonhard Frank</span><p class="text-sm text-muted mt-0.5">Leben und Werk des Würzburger Schriftstellers und Pazifisten.</p></div></li>
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Barock und der Tiepolo-Code</span><p class="text-sm text-muted mt-0.5">Das Deckenfresko der Residenz und das Würzburger Weltbild des 18. Jahrhunderts.</p></div></li>
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Bauernkrieg 1525</span><p class="text-sm text-muted mt-0.5">Ursachen, Verlauf und Nachwirkungen der frühen Revolution in Franken.</p></div></li>
+          <li class="py-4 flex gap-4"><span class="text-gold mt-1.5 shrink-0" aria-hidden="true">◆</span><div><span class="font-serif text-lg text-ink">Denkmalpflege und Erinnerungskultur</span><p class="text-sm text-muted mt-0.5">Stadtbild bewahren, Gedenken gestalten, öffentliche Debatte begleiten.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AKTUELLES ============ -->
+<section id="aktuelles" class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+    <div>
+      <h2 class="font-serif text-3xl sm:text-4xl text-ink">Aktuelles</h2>
+      <p class="mt-3 text-ink-soft max-w-xl">Vorträge, Führungen und Neues aus der Heimatpflege.</p>
+    </div>
+    <a href="aktuelles.html" class="textlink hidden sm:inline-block">Alle Beiträge</a>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-px bg-line border border-line rounded-sm overflow-hidden">
+    <article class="bg-paper p-6 sm:p-7 flex flex-col">
+      <div class="flex items-center gap-3 text-xs text-muted mb-3"><time>7. Mai 2025</time><span class="text-gold">Vortrag</span></div>
+      <h3 class="font-serif text-xl text-ink leading-snug">80 Jahre Frieden in Europa: eine historische Spurensuche</h3>
+      <p class="mt-3 text-sm text-ink-soft leading-relaxed flex-1">In der Akademie Frankenwarte fragt Hans Steidle, warum Westeuropa trotz Kaltem Krieg und atomarer Hochrüstung acht Jahrzehnte ohne großen Krieg blieb.</p>
+      <a href="aktuelles.html" class="textlink mt-5 self-start text-sm">Weiterlesen</a>
+    </article>
+    <article class="bg-paper p-6 sm:p-7 flex flex-col">
+      <div class="flex items-center gap-3 text-xs text-muted mb-3"><time>2025</time><span class="text-gold">Führung</span></div>
+      <h3 class="font-serif text-xl text-ink leading-snug">500 Jahre Bauernkrieg: Rundgänge und Vortragsreihe</h3>
+      <p class="mt-3 text-sm text-ink-soft leading-relaxed flex-1">Zum Jubiläum der Belagerung der Festung Marienberg 1525 führt Hans Steidle an die zentralen Schauplätze des Aufruhrs und ordnet die frühe Revolution des „gemeinen Mannes“ ein.</p>
+      <a href="aktuelles.html" class="textlink mt-5 self-start text-sm">Weiterlesen</a>
+    </article>
+    <article class="bg-paper p-6 sm:p-7 flex flex-col">
+      <div class="flex items-center gap-3 text-xs text-muted mb-3"><time>18. April 2024</time><span class="text-gold">Amt</span></div>
+      <h3 class="font-serif text-xl text-ink leading-snug">Für eine weitere Amtszeit als Stadtheimatpfleger bestellt</h3>
+      <p class="mt-3 text-sm text-ink-soft leading-relaxed flex-1">Der Würzburger Stadtrat hat Hans Steidle erneut zum ehrenamtlichen Stadtheimatpfleger bestellt, für die Amtszeit vom 1. Dezember 2024 bis 30. November 2029.</p>
+      <a href="aktuelles.html" class="textlink mt-5 self-start text-sm">Weiterlesen</a>
+    </article>
+  </div>
+  <a href="aktuelles.html" class="textlink inline-block mt-8 sm:hidden">Alle Beiträge</a>
+</section>
+
+<!-- ============ PUBLIKATIONEN ============ -->
+<section id="publikationen" class="bg-sand/60 border-y border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+      <div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-ink">Publikationen</h2>
+        <p class="mt-3 text-ink-soft max-w-xl">Über zwei Dutzend Bücher und Aufsätze zur Geschichte Würzburgs und Frankens. Eine Auswahl:</p>
+      </div>
+      <a href="publikationen.html" class="btn btn-outline hidden sm:inline-flex">Alle Publikationen</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="border-l-2 border-gold pl-5 py-1">
+        <p class="text-xs text-muted mb-3">Echter Verlag, 2018</p>
+        <h3 class="font-serif text-2xl leading-tight">Der Triumph der Malkunst</h3>
+        <p class="font-serif italic text-ink-soft mt-1">Der Tiepolo-Code und das Würzburger Weltbild</p>
+        <p class="text-sm text-ink-soft mt-4 leading-relaxed">Eine Deutung des weltberühmten Treppenhausfreskos in der Würzburger Residenz.</p>
+      </article>
+      <article class="border-l-2 border-gold pl-5 py-1">
+        <p class="text-xs text-muted mb-3">Echter Verlag, 2014</p>
+        <h3 class="font-serif text-2xl leading-tight">Neckermann &amp; Co.</h3>
+        <p class="font-serif italic text-ink-soft mt-1">Die Ausplünderung der Würzburger Juden im Dritten Reich</p>
+        <p class="text-sm text-ink-soft mt-4 leading-relaxed">Wie die jüdische Bevölkerung Würzburgs systematisch enteignet wurde.</p>
+      </article>
+      <article class="border-l-2 border-gold pl-5 py-1">
+        <p class="text-xs text-muted mb-3">Schöningh, 2007</p>
+        <h3 class="font-serif text-2xl leading-tight">Der Dichter und seine Vaterstadt</h3>
+        <p class="font-serif italic text-ink-soft mt-1">Leonhard Frank und Würzburg</p>
+        <p class="text-sm text-ink-soft mt-4 leading-relaxed">Der Schriftsteller Leonhard Frank und seine widersprüchliche Beziehung zur Heimatstadt.</p>
+      </article>
+    </div>
+    <a href="publikationen.html" class="btn btn-outline inline-flex mt-10 sm:hidden">Alle Publikationen</a>
+  </div>
+</section>
+
+<!-- ============ STIMMEN ============ -->
+<section id="stimmen" class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+  <div class="flex items-center gap-3 mb-3"><span class="rule-gold"></span><h2 class="font-serif text-3xl sm:text-4xl text-ink">Stimmen</h2></div>
+  <p class="text-xs text-muted mb-10 italic">Platzhalter-Zitate. Werden durch echte, freigegebene Stimmen ersetzt.</p>
+  <div class="grid md:grid-cols-3 gap-8">
+    <figure>
+      <blockquote class="font-serif text-xl text-ink leading-snug">„Nach seiner Führung sehe ich beim Gang durch die Altstadt an jeder Ecke Geschichte.“</blockquote>
+      <figcaption class="mt-4 text-sm text-muted">Teilnehmerin einer Stadtführung</figcaption>
+    </figure>
+    <figure>
+      <blockquote class="font-serif text-xl text-ink leading-snug">„Fundiert recherchiert und trotzdem spannend wie ein Roman.“</blockquote>
+      <figcaption class="mt-4 text-sm text-muted">Leserin</figcaption>
+    </figure>
+    <figure>
+      <blockquote class="font-serif text-xl text-ink leading-snug">„Ein unverzichtbarer Gesprächspartner, wenn es um das Gedächtnis unserer Stadt geht.“</blockquote>
+      <figcaption class="mt-4 text-sm text-muted">Kooperationspartner im Kulturbereich</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos" class="bg-sand/60 border-y border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+    <div class="flex items-center gap-3 mb-3"><span class="rule-gold"></span><h2 class="font-serif text-3xl sm:text-4xl text-ink">Vorträge &amp; Videos</h2></div>
+    <p class="text-ink-soft max-w-xl mb-10">Ausgewählte Aufnahmen von Führungen und Statements. Aus Datenschutzgründen wird ein Video erst geladen, wenn Sie auf Abspielen klicken.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <figure class="yt-card" data-yt="qf4hpeG7-7c">
+        <button type="button" class="yt-cover" aria-label="Video abspielen: Leonhard-Frank-Führung durch Würzburg">
+          <span class="yt-play" aria-hidden="true">▶</span>
+          <span class="yt-hint">Erst beim Klick wird YouTube geladen</span>
+        </button>
+        <figcaption class="mt-3">
+          <span class="font-serif text-lg text-ink block">Leonhard-Frank-Führung durch Würzburg</span>
+          <span class="text-sm text-muted">Main-Post, „Würzburg liest ein Buch“</span>
+        </figcaption>
+      </figure>
+      <figure class="yt-card" data-yt="0501lWwZwTQ">
+        <button type="button" class="yt-cover" aria-label="Video abspielen: Die Mozartschule als Denkmal des Wiederaufbaus">
+          <span class="yt-play" aria-hidden="true">▶</span>
+          <span class="yt-hint">Erst beim Klick wird YouTube geladen</span>
+        </button>
+        <figcaption class="mt-3">
+          <span class="font-serif text-lg text-ink block">Die Mozartschule als Denkmal des Wiederaufbaus</span>
+          <span class="text-sm text-muted">stadtrat.TV</span>
+        </figcaption>
+      </figure>
+      <figure class="yt-card" data-yt="fDPscvt4aHI">
+        <button type="button" class="yt-cover" aria-label="Video abspielen: Interview: Für den Erhalt der Mozartschule">
+          <span class="yt-play" aria-hidden="true">▶</span>
+          <span class="yt-hint">Erst beim Klick wird YouTube geladen</span>
+        </button>
+        <figcaption class="mt-3">
+          <span class="font-serif text-lg text-ink block">Interview: Für den Erhalt der Mozartschule</span>
+          <span class="text-sm text-muted">stadtrat.TV</span>
+        </figcaption>
+      </figure>
+      <figure class="yt-card" data-yt="-rOR3po2wFw">
+        <button type="button" class="yt-cover" aria-label="Video abspielen: Videobeitrag mit Hans Steidle">
+          <span class="yt-play" aria-hidden="true">▶</span>
+          <span class="yt-hint">Erst beim Klick wird YouTube geladen</span>
+        </button>
+        <figcaption class="mt-3">
+          <span class="font-serif text-lg text-ink block">Videobeitrag mit Hans Steidle</span>
+          <span class="text-sm text-muted">stadtrat.TV</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="https://www.tvmainfranken.de/mediathek/video/konflikt-zwischen-alt-und-neu-wuerzburger-genossenschaft-will-historisches-wohnhaus-abreissen/" target="_blank" rel="noopener" class="yt-cover" style="text-decoration:none">
+          <span class="yt-play" aria-hidden="true">▶</span>
+          <span class="yt-hint">Bei TV Mainfranken ansehen ↗</span>
+        </a>
+        <figcaption class="mt-3">
+          <span class="font-serif text-lg text-ink block">Konflikt zwischen Alt und Neu</span>
+          <span class="text-sm text-muted">TV Mainfranken: Abriss eines historischen Wohnhauses</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="text-xs text-muted mt-6">Beim Abspielen wird eine Verbindung zu YouTube (Google) hergestellt. Es gelten die Datenschutzbestimmungen von YouTube.</p>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="kontakt" class="bg-wine text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div>
+        <h2 class="font-serif text-3xl sm:text-4xl">Kontakt aufnehmen</h2>
+        <p class="mt-5 text-paper/85 leading-relaxed max-w-md">Anfragen zu Führungen, Vorträgen, Lesungen oder Publikationen? Schreiben Sie eine kurze Nachricht, Sie erhalten zeitnah eine Antwort.</p>
+        <p class="mt-8 text-sm text-paper/70">Es werden nur die Angaben verarbeitet, die zur Bearbeitung Ihrer Anfrage nötig sind.</p>
+      </div>
+
+      <div class="bg-paper text-ink-soft rounded-sm p-6 sm:p-8">
+        <form id="kontakt-form" novalidate>
+          <div data-form-fields class="space-y-5">
+            <div>
+              <label for="email" class="block text-sm font-medium text-ink mb-1.5">E-Mail-Adresse</label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="w-full rounded-sm border border-line bg-white px-4 py-3 text-ink focus:border-wine outline-none" placeholder="ihre@adresse.de">
+            </div>
+            <div>
+              <label for="nachricht" class="block text-sm font-medium text-ink mb-1.5">Ihre Nachricht</label>
+              <textarea id="nachricht" name="nachricht" rows="4" required class="w-full rounded-sm border border-line bg-white px-4 py-3 text-ink focus:border-wine outline-none resize-y" placeholder="Worum geht es?"></textarea>
+            </div>
+            <label class="flex items-start gap-3 text-sm">
+              <input type="checkbox" required class="mt-1 accent-wine w-4 h-4 shrink-0">
+              <span>Ich habe die <a href="#" class="textlink">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.</span>
+            </label>
+            <button type="submit" class="btn btn-primary w-full">Nachricht senden</button>
+            <p class="text-xs text-muted">Prototyp ohne Versandfunktion. Für die Live-Seite wird ein datensparsamer EU-Dienst angebunden.</p>
+          </div>
+          <div id="form-success" hidden class="text-center py-8">
+            <p class="font-serif text-xl text-ink">Danke für Ihre Nachricht.</p>
+            <p class="text-sm text-muted mt-2">Im Prototyp wird nichts gesendet.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNER ============ -->
+<section id="partner" class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
+  <div class="flex items-center gap-3 mb-3"><span class="rule-gold"></span><h2 class="font-serif text-3xl sm:text-4xl text-ink">Partner und Netzwerk</h2></div>
+  <p class="text-ink-soft max-w-xl mb-10">Hans Steidle ist in zahlreichen Institutionen der Würzburger Kultur- und Bildungslandschaft aktiv.</p>
+  <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-sm overflow-hidden">
+    <li><a href="https://leonhard-frank-gesellschaft.de/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Leonhard-Frank-Gesellschaft</span><span class="text-muted text-sm"> ↗</span></a></li>
+    <li><a href="https://www.vhs-wuerzburg.info/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Volkshochschule Würzburg</span><span class="text-muted text-sm"> ↗</span></a></li>
+    <li><a href="https://www.wuerzburger-gaestefuehrer.de/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Würzburger Gästeführer e.V.</span><span class="text-muted text-sm"> ↗</span></a></li>
+    <li><a href="https://www.frankenwarte.de/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Akademie Frankenwarte</span><span class="text-muted text-sm"> ↗</span></a></li>
+    <li><a href="https://www.wuerzburg.de/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Stadt Würzburg, Kulturamt</span><span class="text-muted text-sm"> ↗</span></a></li>
+    <li><a href="https://www.wuerzburg.de/" target="_blank" rel="noopener" class="group block h-full bg-paper p-6 hover:bg-sand/50 transition-colors"><span class="font-serif text-lg text-ink group-hover:text-wine">Stadtheimatpflege Würzburg</span><span class="text-muted text-sm"> ↗</span></a></li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-paper">
+  <div class="w-full overflow-hidden leading-[0]" aria-hidden="true">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none" class="w-full h-12 sm:h-16" fill="#f5f3ee" fill-opacity="0.09">
+      <path d="M0 80 V60 Q90 40 150 52 L150 40 L160 40 L160 32 L170 32 L170 40 L184 40 L184 52 Q210 46 240 56 L240 80 Z"/>
+      <circle cx="150" cy="40" r="7"/>
+      <path d="M330 80 V56 L520 56 V80 Z M345 56 a20 20 0 0 1 40 0 Z M405 56 a20 20 0 0 1 40 0 Z M465 56 a20 20 0 0 1 40 0 Z"/>
+      <rect x="720" y="30" width="14" height="50"/><path d="M720 30 l7 -12 7 12 Z"/>
+      <rect x="748" y="30" width="14" height="50"/><path d="M748 30 l7 -12 7 12 Z"/>
+      <path d="M800 80 V44 a16 16 0 0 1 32 0 V80 Z"/>
+      <rect x="880" y="20" width="10" height="60"/><path d="M880 20 l5 -14 5 14 Z"/>
+      <rect x="930" y="46" width="120" height="34"/><path d="M930 46 L990 24 L1050 46 Z"/>
+    </svg>
+  </div>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 pt-6 pb-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <svg width="34" height="34" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="50" r="47" stroke="#f5f3ee" stroke-width="2"/>
+            <circle cx="50" cy="50" r="41" stroke="#b0873c" stroke-width="1"/>
+            <text x="50" y="57" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="34" font-weight="500" fill="#f5f3ee">HS</text>
+            <g fill="#b0873c"><path d="M38 74 l4 -7 4 7 z"/><path d="M46 74 l4 -7 4 7 z"/><path d="M54 74 l4 -7 4 7 z"/></g>
+          </svg>
+          <span class="font-serif text-xl">Hans Steidle</span>
+        </div>
+        <p class="text-sm text-paper/70 leading-relaxed">Historiker, Autor und ehrenamtlicher Stadtheimatpfleger der Stadt Würzburg.</p>
+      </div>
+      <nav aria-label="Footer Navigation">
+        <h3 class="text-sm text-paper/50 mb-4">Navigation</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="text-paper/85 hover:text-paper">Start</a></li>
+          <li><a href="ueber.html" class="text-paper/85 hover:text-paper">Über Hans Steidle</a></li>
+          <li><a href="aktuelles.html" class="text-paper/85 hover:text-paper">Aktuelles</a></li>
+          <li><a href="publikationen.html" class="text-paper/85 hover:text-paper">Publikationen</a></li>
+          <li><a href="#kontakt" class="text-paper/85 hover:text-paper">Kontakt</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Weitere Seiten">
+        <h3 class="text-sm text-paper/50 mb-4">Mehr</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="ueber.html#ehrenaemter" class="text-paper/85 hover:text-paper">Ehrenämter</a></li>
+          <li><a href="ueber.html#presse" class="text-paper/85 hover:text-paper">Pressespiegel</a></li>
+          <li><a href="index.html#partner" class="text-paper/85 hover:text-paper">Partner und Netzwerk</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Rechtliches">
+        <h3 class="text-sm text-paper/50 mb-4">Rechtliches</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-paper/85 hover:text-paper">Impressum</a></li>
+          <li><a href="#" class="text-paper/85 hover:text-paper">Datenschutz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mt-12 pt-6 border-t border-paper/15 flex flex-col sm:flex-row justify-between gap-3 text-xs text-paper/55">
+      <p>&copy; <span data-year>2026</span> Hans Steidle. Alle Rechte vorbehalten.</p>
+      <p>Biografische Angaben u.a. nach WürzburgWiki (CC BY-SA 4.0).</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', function(){
+        var closed = menu.hasAttribute('hidden');
+        if (closed) { menu.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); btn.setAttribute('aria-label','Menü schließen'); }
+        else { menu.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Menü öffnen'); }
+      });
+      menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }); });
+    }
+    document.querySelectorAll('[data-year]').forEach(function(e){ e.textContent = new Date().getFullYear(); });
+    var form = document.getElementById('kontakt-form');
+    if (form) {
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        var fields = form.querySelector('[data-form-fields]');
+        var ok = document.getElementById('form-success');
+        if (fields) fields.setAttribute('hidden','');
+        if (ok) ok.removeAttribute('hidden');
+      });
+    }
+    document.querySelectorAll('.yt-card').forEach(function(card){
+      var btn = card.querySelector('.yt-cover');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        var id = card.getAttribute('data-yt');
+        var f = document.createElement('iframe');
+        f.className = 'yt-frame';
+        f.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        f.setAttribute('allowfullscreen','');
+        f.setAttribute('title', btn.getAttribute('aria-label') || 'YouTube-Video');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        btn.replaceWith(f);
+      });
+    });
+  })();
+</script>
+</body>
+</html>

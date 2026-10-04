@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Aktuelles – Vorträge, Führungen & Neuigkeiten von Hans Steidle</title>
+<meta name="description" content="Aktuelle Vorträge, Führungen und Neuigkeiten von Dr. Hans Steidle, Stadtheimatpfleger von Würzburg.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { ink:'#1e2833','ink-soft':'#3a4149', paper:'#f5f3ee', sand:'#e8e1d3', line:'#ddd5c6', wine:'#7c2f3a','wine-dark':'#612530', gold:'#b0873c', muted:'#6b6f75' },
+  fontFamily: { serif:['Fraunces','Georgia','serif'], sans:['"Instrument Sans"','system-ui','sans-serif'] }
+}}}
+</script>
+<style>
+  :root { color-scheme: light; } html { font-family:'Instrument Sans',system-ui,sans-serif; }
+  h1,h2,h3,h4,.font-serif { font-family:'Fraunces',Georgia,serif; }
+  body { background:#f5f3ee; color:#3a4149; } a { text-decoration:none; }
+  ::selection { background:#7c2f3a; color:#f5f3ee; }
+  :focus-visible { outline:2px solid #7c2f3a; outline-offset:3px; border-radius:2px; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.8rem 1.6rem; font-weight:500; font-size:.95rem; border-radius:3px; transition:.2s cursor:pointer; }
+  .btn-primary { background:#7c2f3a; color:#f5f3ee; } .btn-primary:hover { background:#612530; }
+  .textlink { color:#7c2f3a; font-weight:500; background-image:linear-gradient(#b0873c,#b0873c); background-size:0% 1px; background-position:0 100%; background-repeat:no-repeat; padding-bottom:2px; transition:background-size .25s; } .textlink:hover { background-size:100% 1px; }
+  .navlink { position:relative; font-size:.98rem; color:#3a4149; padding:.4rem 0; transition:color .2s; } .navlink:hover { color:#1e2833; }
+  .navlink[aria-current="page"] { color:#1e2833; } .navlink[aria-current="page"]::after { content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#b0873c; }
+  .rule-gold { width:44px; height:2px; background:#b0873c; }
+  .tag { display:inline-block; font-size:.7rem; letter-spacing:.03em; color:#7c2f3a; border:1px solid #ddd5c6; border-radius:2px; padding:.15rem .5rem; }
+  @media (prefers-reduced-motion: reduce) { * { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+</style>
+</head>
+<body class="antialiased">
+<a href="#hauptinhalt" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:bg-ink focus:text-paper focus:px-4 focus:py-2 focus:rounded">Zum Inhalt springen</a>
+
+<header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-line">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Hans Steidle – Startseite">
+        <span class="shrink-0" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="47" stroke="#1e2833" stroke-width="2"/><circle cx="50" cy="50" r="41" stroke="#b0873c" stroke-width="1"/>
+            <text x="50" y="57" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="34" font-weight="500" fill="#1e2833">HS</text>
+            <g fill="#b0873c"><path d="M38 74 l4 -7 4 7 z"/><path d="M46 74 l4 -7 4 7 z"/><path d="M54 74 l4 -7 4 7 z"/></g>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-none">
+          <span class="font-serif text-lg sm:text-xl text-ink">Hans Steidle</span>
+          <span class="text-[11px] text-muted mt-1 tracking-wide">Historiker &amp; Stadtheimatpfleger</span>
+        </span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Hauptnavigation">
+        <a href="index.html" class="navlink">Start</a>
+        <a href="ueber.html" class="navlink">Über Hans Steidle</a>
+        <a href="aktuelles.html" class="navlink" aria-current="page">Aktuelles</a>
+        <a href="publikationen.html" class="navlink">Publikationen</a>
+        <a href="index.html#kontakt" class="btn btn-primary !py-2.5 !px-5">Kontakt</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menü öffnen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" hidden class="md:hidden border-t border-line bg-paper">
+    <nav class="mx-auto max-w-6xl px-5 py-4 flex flex-col gap-1" aria-label="Mobile Navigation">
+      <a href="index.html" class="py-3 text-ink-soft border-b border-line/70">Start</a>
+      <a href="ueber.html" class="py-3 text-ink-soft border-b border-line/70">Über Hans Steidle</a>
+      <a href="aktuelles.html" class="py-3 text-ink border-b border-line/70">Aktuelles</a>
+      <a href="publikationen.html" class="py-3 text-ink-soft border-b border-line/70">Publikationen</a>
+      <a href="index.html#kontakt" class="py-3 text-wine font-medium">Kontakt aufnehmen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="hauptinhalt">
+<section class="mx-auto max-w-6xl px-5 sm:px-8 pt-14 sm:pt-20 pb-6">
+  <div class="flex items-center gap-3 mb-5"><span class="rule-gold"></span><span class="text-sm text-muted">Termine &amp; Neuigkeiten</span></div>
+  <h1 class="font-serif text-4xl sm:text-6xl text-ink leading-[1.05]">Aktuelles</h1>
+  <p class="mt-6 text-lg text-ink-soft max-w-2xl leading-relaxed">Vorträge, Führungen und Neues aus der Heimatpflege. Diese Seite wird laufend gepflegt.</p>
+</section>
+
+
+
+<section class="mx-auto max-w-6xl px-5 sm:px-8 py-12 sm:py-16">
+  <div class="max-w-3xl">
+  <div class="divide-y divide-line border-t border-line">
+    <!-- Beitrag -->
+    <article class="py-10">
+      <div class="flex items-center gap-3 mb-3"><time class="text-sm text-muted">7. Mai 2025</time><span class="tag">Vortrag</span></div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink leading-snug">80 Jahre Frieden in Europa: eine historische Spurensuche</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Nach dem Zweiten Weltkrieg gab es weltweit nur wenige kriegsfreie Tage, und dennoch blieben Deutschland und Westeuropa acht Jahrzehnte von einem großen Krieg verschont. In seinem Vortrag in der Akademie Frankenwarte geht Hans Steidle den Gründen nach und lädt anschließend zur Diskussion.</p>
+      <p class="mt-3 text-sm text-muted">Rudolf-Alexander-Schröder-Haus, Würzburg.</p>
+      <p class="mt-4"><a href="https://www.frankenwarte.de/" target="_blank" rel="noopener" class="textlink text-sm">Akademie Frankenwarte ↗</a></p>
+    </article>
+    <!-- Beitrag -->
+    <article class="py-10">
+      <div class="flex items-center gap-3 mb-3"><time class="text-sm text-muted">2025</time><span class="tag">Führung</span></div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink leading-snug">500 Jahre Bauernkrieg: Rundgänge und Vortragsreihe</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Genau 500 Jahre nach den Ereignissen von 1525 führt Hans Steidle vom Ort des Sturms auf die Festung Marienberg zu den zentralen Schauplätzen des Aufruhrs. Rundgänge und eine begleitende Vortragsreihe beleuchten Ursachen, Verlauf und Nachwirkungen der frühen Revolution des „gemeinen Mannes“.</p>
+    </article>
+    <!-- Beitrag -->
+    <article class="py-10">
+      <div class="flex items-center gap-3 mb-3"><time class="text-sm text-muted">23. März 2025</time><span class="tag">Führung</span></div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink leading-snug">Weltgästeführertag: Rundgänge zum Bauernkrieg</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Zum Weltgästeführertag lud Hans Steidle zu zwei kurzen Rundgängen rund um Grafeneckart und Vierröhrenbrunnen. Der Eintritt war frei, um Spenden für die Restaurierung eines historischen Weinbergshäuschens wurde gebeten.</p>
+      <p class="mt-4"><a href="https://www.wuerzburger-gaestefuehrer.de/" target="_blank" rel="noopener" class="textlink text-sm">Würzburger Gästeführer e.V. ↗</a></p>
+    </article>
+    <!-- Beitrag -->
+    <article class="py-10">
+      <div class="flex items-center gap-3 mb-3"><time class="text-sm text-muted">18. April 2024</time><span class="tag">Amt</span></div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink leading-snug">Für eine weitere Amtszeit als Stadtheimatpfleger bestellt</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">In seiner 70. Sitzung hat der Würzburger Stadtrat Hans Steidle erneut zum ehrenamtlichen Stadtheimatpfleger bestellt. Die neue Amtszeit läuft vom 1. Dezember 2024 bis zum 30. November 2029.</p>
+    </article>
+    <!-- Beitrag -->
+    <article class="py-10">
+      <div class="flex items-center gap-3 mb-3"><time class="text-sm text-muted">20. September 2021</time><span class="tag">Porträt</span></div>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink leading-snug">Würzburgs Stadtheimatpfleger wird 70</h2>
+      <p class="mt-4 text-ink-soft leading-relaxed">Anlässlich seines 70. Geburtstags würdigte die Main-Post das jahrzehntelange Wirken Hans Steidles als Pädagoge, Historiker und Heimatpfleger.</p>
+      <p class="mt-4"><a href="https://www.mainpost.de/10659941" target="_blank" rel="noopener" class="textlink text-sm">Zur Meldung in der Main-Post ↗</a></p>
+    </article>
+  </div>
+  </div>
+</section>
+
+<section class="bg-wine text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <h2 class="font-serif text-2xl sm:text-3xl">Auf dem Laufenden bleiben oder eine Führung anfragen?</h2>
+    <a href="index.html#kontakt" class="btn" style="border:1px solid rgba(245,243,238,.45);color:#f5f3ee">Kontakt aufnehmen</a>
+  </div>
+</section>
+</main>
+
+<footer class="bg-ink text-paper">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 pt-14 pb-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <svg width="34" height="34" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="50" r="47" stroke="#f5f3ee" stroke-width="2"/><circle cx="50" cy="50" r="41" stroke="#b0873c" stroke-width="1"/>
+            <text x="50" y="57" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="34" font-weight="500" fill="#f5f3ee">HS</text>
+            <g fill="#b0873c"><path d="M38 74 l4 -7 4 7 z"/><path d="M46 74 l4 -7 4 7 z"/><path d="M54 74 l4 -7 4 7 z"/></g>
+          </svg>
+          <span class="font-serif text-xl">Hans Steidle</span>
+        </div>
+        <p class="text-sm text-paper/70 leading-relaxed">Historiker, Autor und ehrenamtlicher Stadtheimatpfleger der Stadt Würzburg.</p>
+      </div>
+      <nav aria-label="Footer Navigation"><h3 class="text-sm text-paper/50 mb-4">Navigation</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="index.html" class="text-paper/85 hover:text-paper">Start</a></li>
+          <li><a href="ueber.html" class="text-paper/85 hover:text-paper">Über Hans Steidle</a></li>
+          <li><a href="aktuelles.html" class="text-paper/85 hover:text-paper">Aktuelles</a></li>
+          <li><a href="publikationen.html" class="text-paper/85 hover:text-paper">Publikationen</a></li>
+          <li><a href="index.html#kontakt" class="text-paper/85 hover:text-paper">Kontakt</a></li>
+        </ul></nav>
+      <nav aria-label="Weitere Seiten"><h3 class="text-sm text-paper/50 mb-4">Mehr</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="ueber.html#ehrenaemter" class="text-paper/85 hover:text-paper">Ehrenämter</a></li>
+          <li><a href="ueber.html#presse" class="text-paper/85 hover:text-paper">Pressespiegel</a></li>
+          <li><a href="index.html#partner" class="text-paper/85 hover:text-paper">Partner und Netzwerk</a></li>
+        </ul></nav>
+      <nav aria-label="Rechtliches"><h3 class="text-sm text-paper/50 mb-4">Rechtliches</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-paper/85 hover:text-paper">Impressum</a></li>
+          <li><a href="#" class="text-paper/85 hover:text-paper">Datenschutz</a></li>
+        </ul></nav>
+    </div>
+    <div class="mt-12 pt-6 border-t border-paper/15 flex flex-col sm:flex-row justify-between gap-3 text-xs text-paper/55">
+      <p>&copy; <span data-year>2026</span> Hans Steidle. Alle Rechte vorbehalten.</p>
+      <p>Biografische Angaben u.a. nach WürzburgWiki (CC BY-SA 4.0).</p>
+    </div>
+  </div>
+</footer>
+<script>
+  (function(){ var b=document.getElementById('menu-btn'),m=document.getElementById('mobile-menu');
+    if(b&&m){b.addEventListener('click',function(){var c=m.hasAttribute('hidden');if(c){m.removeAttribute('hidden');b.setAttribute('aria-expanded','true');}else{m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');}});
+    m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.setAttribute('hidden','');b.setAttribute('aria-expanded','false');});});}
+    document.querySelectorAll('[data-year]').forEach(function(e){e.textContent=new Date().getFullYear();}); })();
+</script>
+</body>
+</html>

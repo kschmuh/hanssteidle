@@ -51,7 +51,7 @@ tailwind.config = { theme: { extend: {
         </span>
         <span class="flex flex-col leading-none">
           <span class="font-serif text-lg sm:text-xl text-ink">Hans Steidle</span>
-          <span class="text-[11px] text-muted mt-1 tracking-wide">Historiker &amp; Stadtheimatpfleger</span>
+          <span class="text-xs text-ink-soft mt-1 tracking-wide">Historiker &amp; Stadtheimatpfleger</span>
         </span>
       </a>
       <nav class="hidden md:flex items-center gap-8" aria-label="Hauptnavigation">
@@ -119,13 +119,14 @@ tailwind.config = { theme: { extend: {
 
       <h2 class="font-serif text-2xl sm:text-3xl text-ink mt-12 mb-4">Schwerpunkte</h2>
       <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Würzburger Stadtgeschichte</li>
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Jüdisches Leben in Unterfranken</li>
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Leonhard Frank und Jehuda Amichai</li>
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Barock und der Tiepolo-Code</li>
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Bauernkrieg 1525</li>
-        <li class="flex gap-3 text-ink-soft"><span class="text-gold mt-1.5" aria-hidden="true">◆</span> Denkmalpflege und Erinnerungskultur</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Würzburger Stadtgeschichte</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Jüdisches Leben in Würzburg und Unterfranken</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Leonhard Frank und Jehuda Amichai</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Barock und der Tiepolo-Code</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Bauernkrieg 1525</li>
+        <li class="flex items-center gap-3 text-ink-soft"><span class="text-gold" aria-hidden="true">◆</span> Denkmalpflege und Erinnerungskultur</li>
       </ul>
+      <p class="mt-6 text-ink-soft leading-relaxed max-w-2xl">Seine Themen reichen über Würzburg hinaus bis zu Kunst und Kultur von der Antike bis zur Gegenwart. Zu Führungen wie Vorträgen sind freie Vereinbarungen möglich.</p>
     </div>
   </div>
 </section>
@@ -135,14 +136,14 @@ tailwind.config = { theme: { extend: {
   <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20">
     <div class="flex items-center gap-3 mb-3"><span class="rule-gold"></span><h2 class="font-serif text-3xl sm:text-4xl text-ink">Ehrenämter</h2></div>
     <p class="text-ink-soft max-w-xl mb-10">Über sein Amt hinaus engagiert sich Hans Steidle seit Jahrzehnten in der Würzburger Bildungs- und Erinnerungskultur.</p>
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="border-t-2 border-gold pt-5">
         <h3 class="font-serif text-xl text-ink">Volkshochschule Würzburg</h3>
         <p class="text-sm text-muted mt-1">Seit 1990</p>
         <p class="text-ink-soft mt-3 leading-relaxed text-[0.97rem]">Mitglied des Vorstands, von 2001 bis 2011 als Erster Vorsitzender an der Spitze der Würzburger Volkshochschule.</p>
       </div>
       <div class="border-t-2 border-gold pt-5">
-        <h3 class="font-serif text-xl text-ink">Leonhard-Frank-Gesellschaft</h3>
+        <h3 class="font-serif text-xl text-ink"><a href="https://leonhard-frank-gesellschaft.de/" target="_blank" rel="noopener" class="hover:text-wine">Leonhard-Frank-Gesellschaft ↗</a></h3>
         <p class="text-sm text-muted mt-1">Seit den späten 1990ern</p>
         <p class="text-ink-soft mt-3 leading-relaxed text-[0.97rem]">Langjähriges Vorstandsmitglied und seit 2019 Erster Vorsitzender der Gesellschaft zur Pflege des Werks von Leonhard Frank.</p>
       </div>
@@ -151,46 +152,13 @@ tailwind.config = { theme: { extend: {
         <p class="text-sm text-muted mt-1">Fortlaufend</p>
         <p class="text-ink-soft mt-3 leading-relaxed text-[0.97rem]">Beratung des Würzburger Kulturbeirats und Mitgestaltung der städtischen Erinnerungskultur.</p>
       </div>
+      <div class="border-t-2 border-gold pt-5">
+        <h3 class="font-serif text-xl text-ink"><a href="https://www.frankenwarte.de/die-akademie/ueber-uns/zusatzboxen/43.Unser-Traegerverein.html" target="_blank" rel="noopener" class="hover:text-wine">Akademie Frankenwarte ↗</a></h3>
+        <p class="text-sm text-muted mt-1">Seit 2025</p>
+        <p class="text-ink-soft mt-3 leading-relaxed text-[0.97rem]">Mitglied im Vorstand des Trägervereins der Akademie Frankenwarte.</p>
+      </div>
     </div>
   </div>
-</section>
-
-<!-- PRESSESPIEGEL -->
-<section id="presse" class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20 scroll-mt-24">
-  <div class="flex items-center gap-3 mb-3"><span class="rule-gold"></span><h2 class="font-serif text-3xl sm:text-4xl text-ink">Pressespiegel</h2></div>
-  <p class="text-ink-soft max-w-xl mb-10">Eine Auswahl von Berichten über Hans Steidle und sein Wirken.</p>
-  <ul class="divide-y divide-line border-t border-line">
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">20. September 2021</span>
-      <a href="https://www.mainpost.de/10659941" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Würzburgs Stadtheimatpfleger wird 70 Jahre alt</a>
-      <span class="text-sm text-muted sm:ml-auto">Main-Post</span>
-    </li>
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">16. März 2018</span>
-      <a href="https://www.mainpost.de/9913186" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Wie ein Roman ein Stück untergegangenes Würzburg erzählt</a>
-      <span class="text-sm text-muted sm:ml-auto">Main-Post</span>
-    </li>
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">6. Dezember 2015</span>
-      <a href="https://www.mainpost.de/9035698" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Steidles Plädoyer für städtisches Erinnern</a>
-      <span class="text-sm text-muted sm:ml-auto">Main-Post</span>
-    </li>
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">9. Dezember 2014</span>
-      <a href="https://www.mainpost.de/8474604" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Ein Pazifist mit Zigarette</a>
-      <span class="text-sm text-muted sm:ml-auto">Main-Post</span>
-    </li>
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">9. Juni 2009</span>
-      <a href="https://www.mainpost.de/5157782" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Neuer Stadtheimatpfleger zu aktuellen Bauten und Streitkultur</a>
-      <span class="text-sm text-muted sm:ml-auto">Main-Post</span>
-    </li>
-    <li class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-      <span class="text-sm text-muted sm:w-40 shrink-0">Süddeutsche Zeitung</span>
-      <a href="https://www.sueddeutsche.de/bayern/schloss-neuschwanstein-unesco-welterbe-bewerbung-bayern-volksentscheid-1.5883106" class="textlink font-serif text-lg text-ink" target="_blank" rel="noopener">Neuschwanstein, UNESCO-Welterbe und der Volksentscheid</a>
-      <span class="text-sm text-muted sm:ml-auto">SZ Bayern</span>
-    </li>
-  </ul>
 </section>
 
 <!-- CTA -->
@@ -234,15 +202,15 @@ tailwind.config = { theme: { extend: {
         <h3 class="text-sm text-paper/50 mb-4">Mehr</h3>
         <ul class="space-y-2.5 text-sm">
           <li><a href="ueber.html#ehrenaemter" class="text-paper/85 hover:text-paper">Ehrenämter</a></li>
-          <li><a href="ueber.html#presse" class="text-paper/85 hover:text-paper">Pressespiegel</a></li>
+          <li><a href="publikationen.html#presse" class="text-paper/85 hover:text-paper">Pressespiegel</a></li>
           <li><a href="index.html#partner" class="text-paper/85 hover:text-paper">Partner und Netzwerk</a></li>
         </ul>
       </nav>
       <nav aria-label="Rechtliches">
         <h3 class="text-sm text-paper/50 mb-4">Rechtliches</h3>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="#" class="text-paper/85 hover:text-paper">Impressum</a></li>
-          <li><a href="#" class="text-paper/85 hover:text-paper">Datenschutz</a></li>
+          <li><a href="impressum.html" class="text-paper/85 hover:text-paper">Impressum</a></li>
+          <li><a href="datenschutz.html" class="text-paper/85 hover:text-paper">Datenschutz</a></li>
         </ul>
       </nav>
     </div>
